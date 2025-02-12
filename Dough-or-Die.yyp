@@ -26,7 +26,9 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"KADU_Ourple_Mode.mp4","CopyToMask":-1,"filePath":"datafiles","name":"KADU_Ourple_Mode.mp4","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -34,12 +36,13 @@
   },
   "name":"Dough-or-Die",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"KaduProdCard","path":"objects/KaduProdCard/KaduProdCard.yy",},},
+    {"id":{"name":"ProductionCard","path":"rooms/ProductionCard/ProductionCard.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"ProductionCard","path":"rooms/ProductionCard/ProductionCard.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
