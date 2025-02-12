@@ -1,1 +1,1 @@
-video = video_open("KADU_Ourple_Mode.mp4");
+video = video_open("KADU_ourple_mode.mp4");
