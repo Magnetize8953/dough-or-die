@@ -1,15 +1,12 @@
-// Initialize movement and health
 hspeed = 0;
 vspeed = 0;
 plane_health = 100;
 move_speed = 4;
 
-// Item-related variables
 item_name = "";
 item_timer = 0; 
 speed_timer = 0;
 
-// Weapon-related variables
 has_weapon = false;
 is_invis = false;
 weapon = "";
@@ -23,9 +20,9 @@ function swing_weapon() {
     }
 
     is_attacking = true;
-    attack_cooldown = 30; // Cooldown for attack
+    attack_cooldown = 30;
 
-    var attack_range = 60; // Adjust if necessary
+    var attack_range = 60;
     var attack_direction = image_angle;
 
     show_debug_message("Swinging weapon...");
@@ -36,12 +33,9 @@ function swing_weapon() {
                                  obj_player2);
 
         if (hit != noone) { 
-            show_debug_message("Hit enemy! HP before: " + string(hit.hp));
-            hit.hp -= 10; // Damage enemy
-            show_debug_message("Enemy HP after: " + string(hit.hp));
+            hit.hp -= 10;
 
             if (hit.hp <= 0) {
-                show_debug_message("Enemy defeated!");
                 instance_destroy(hit);
             }
         } else {
@@ -51,7 +45,6 @@ function swing_weapon() {
         show_debug_message("No enemy player exists to attack!");
     }
 
-    // Play attack animation
     sprite_index = spr_pizza_cutter_swing;
     image_index = 0;
 }

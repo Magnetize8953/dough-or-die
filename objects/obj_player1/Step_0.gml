@@ -1,14 +1,11 @@
-// Reset movement each step
 hspeed = 0;
 vspeed = 0;
 
-// Player movement
 if (keyboard_check(vk_left))  hspeed = -move_speed;
 if (keyboard_check(vk_right)) hspeed = move_speed;
 if (keyboard_check(vk_up))    vspeed = -move_speed;
 if (keyboard_check(vk_down))  vspeed = move_speed;
 
-// Timers countdown
 if (item_timer > 0) {
     item_timer -= 1;
 }
@@ -16,26 +13,23 @@ if (item_timer > 0) {
 if (speed_timer > 0) {
     speed_timer -= 1;
 } else {
-    move_speed = 4; // Reset to default speed
+    move_speed = 4;
 }
 
-// Reduce attack cooldown
 if (attack_cooldown > 0) {
     attack_cooldown -= 1;
 }
 
-// Ensure player can attack if they have the pizza cutter
 if (has_weapon && weapon == "pizza_cutter" && (keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_left))) {
     if (attack_cooldown <= 0) {
         swing_weapon();
     }
 }
 
-// Reset animation after attack
 if (is_attacking) {
     if (image_index >= image_number - 1) { 
         is_attacking = false;
-        sprite_index = spr_player_with_pizza_cutter; // Reset sprite after swing
+        sprite_index = spr_player_with_pizza_cutter;
     }
 }
 
