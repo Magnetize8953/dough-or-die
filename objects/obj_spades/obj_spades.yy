@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite5",
-    "path":"sprites/Sprite5/Sprite5.yy",
+    "name":"spr_speed_boost",
+    "path":"sprites/spr_speed_boost/spr_speed_boost.yy",
   },
   "spriteMaskId":null,
   "visible":true,

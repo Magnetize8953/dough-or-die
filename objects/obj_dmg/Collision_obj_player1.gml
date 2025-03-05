@@ -1,9 +1,9 @@
-if (other.plane_health > 0) {
+if (other.player_hp > 0) {
 
-    other.plane_health -= 40;
+    other.player_hp -= 40;
 
-    if (other.plane_health <= 0) {
-        other.plane_health = 0;  
+    if (other.player_hp <= 0) {
+        other.player_hp = 0;  
         show_debug_message("Player destroyed!");
         instance_destroy(other);
     }

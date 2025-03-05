@@ -1,7 +1,8 @@
 hspeed = 0;
 vspeed = 0;
-plane_health = 100;
+player_hp = 100;
 move_speed = 4;
+image_speed = 1;
 
 item_name = "";
 item_timer = 0; 
@@ -23,9 +24,11 @@ function swing_weapon() {
     attack_cooldown = 30;
 
     var attack_range = 60;
+	// I was having trouble conceptualizing setting up the attack direction so I used 
+	// chat to give me some pseudo code to better understand what I was doing
     var attack_direction = image_angle;
 
-    show_debug_message("Swinging weapon...");
+    show_debug_message("Swinging weapon");
 
     if (instance_exists(obj_player2)) {
         var hit = instance_place(x + lengthdir_x(attack_range, attack_direction), 
@@ -33,9 +36,9 @@ function swing_weapon() {
                                  obj_player2);
 
         if (hit != noone) { 
-            hit.hp -= 10;
+            hit.enemy_hp -= 10;
 
-            if (hit.hp <= 0) {
+            if (hit.enemy_hp <= 0) {
                 instance_destroy(hit);
             }
         } else {
@@ -45,7 +48,7 @@ function swing_weapon() {
         show_debug_message("No enemy player exists to attack!");
     }
 
-    sprite_index = spr_pizza_cutter_swing;
+    sprite_index = spr_player_with_pizza_cutter_swing;
     image_index = 0;
 }
 

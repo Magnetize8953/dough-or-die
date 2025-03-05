@@ -1,3 +1,3 @@
-if (hp <= 0) {
+if (enemy_hp <= 0) {
     instance_destroy();
 }
