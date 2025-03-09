@@ -59,7 +59,8 @@ global.br_west = ds_map_find_value(global.room_object_map, room_get_name(global.
 //ds_map_find_value(global.room_object_map, string(BR.WestExit)).WestConnect = BR.EastExit;
 
 //TOTAL FILLER CODE
-room_goto(global.ML.RoomList[0]);
+//room_goto(global.ML.RoomList[0]);
+room_goto(CaRoomHeart);
 //room_goto(Player1Base);
 //instance_create_layer(1910 - obj_Go2Room.sprite_xoffset, 1080 / 2, "Instances", obj_Go2Room, {room_link : global.ML.RoomList[0], result : "W"});
 
