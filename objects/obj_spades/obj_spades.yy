@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_spades",
+  "%Name":"obj_Spades",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player1","path":"objects/obj_player1/obj_player1.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_spades",
+  "name":"obj_Spades",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_speed_boost",
-    "path":"sprites/spr_speed_boost/spr_speed_boost.yy",
+    "name":"CardSprite",
+    "path":"sprites/CardSprite/CardSprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,
