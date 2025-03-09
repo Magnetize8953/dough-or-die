@@ -1,4 +1,4 @@
-//Handles checking if the player has picked up a speed boost
+// Handles checking if the player has picked up a speed boost
 if (speed_timer > 0) {
     speed_timer -= 1;
 	item_timer -= 1;
@@ -20,10 +20,9 @@ if (invis_timer > 0) {
 		move_speed *= 2.5;
 	}
 }
-	
 
 
-//Movement
+// Movement
 if keyboard_check(ord("A")) and !instance_place(x - move_speed, y, obj_Barrier) and !self.disable_west {
 	x -= self.move_speed;
 }

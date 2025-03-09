@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Taft",
+  "%Name":"obj_25OfSpades",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Taft",
+  "name":"obj_25OfSpades",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Taft",
-    "path":"sprites/spr_Taft/spr_Taft.yy",
+    "name":"spr_25OfSpades",
+    "path":"sprites/spr_25OfSpades/spr_25OfSpades.yy",
   },
   "spriteMaskId":null,
   "visible":true,

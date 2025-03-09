@@ -1,5 +1,5 @@
-//Modified off code provided via ChatGPT
-//Essentially, we map each RoomHolder via the room its in, so that we can then retrieve them by room name
+// Modified off code provided via ChatGPT
+// Essentially, we map each RoomHolder via the room its in, so that we can then retrieve them by room name
 if (!variable_global_exists("room_object_map")) {
     global.room_object_map = ds_map_create();
 	show_debug_message("Map made");
@@ -9,19 +9,9 @@ ds_map_set(global.room_object_map, room_get_name(self.associated_room), self.id)
 show_debug_message("ASSOCIATED ROOM BEING MAPPED IN: " + room_get_name(self.associated_room));
 show_debug_message("Map?: " + string(ds_map_find_value(global.room_object_map, room_get_name(self.associated_room))));
 
-//original_nc = noone;
-
-//original_sc = noone;
-
-//original_wc = noone;
-
-//original_ec = noone;
-
-//alarm[0] = 1;
-
 if self.north_connect != noone {
 	instance_create_layer(1920 / 2, 10 + obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.north_connect, result : self.north_result});
-	original_nc = self.north_connect; //used to check for updates
+	original_nc = self.north_connect; // used to check for updates
 }
 if self.south_connect != noone {
 	instance_create_layer(1920 / 2, 1070 - obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.south_connect, result : self.south_result});
@@ -39,4 +29,3 @@ if self.east_connect != noone {
 myself = ds_map_find_value(global.room_object_map, room_get_name(self.associated_room));
 
 is_bm_east_check = true;
-

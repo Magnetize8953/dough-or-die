@@ -1,7 +1,7 @@
 self.persistent = true;
 
-//Random choice conditional produced with ChatGPT's assistance to debug random seed not resetting properly
-//Remaining code and data structure is original work
+// Random choice conditional produced with ChatGPT's assistance to debug random seed not resetting properly
+// Remaining code and data structure is original work
 randomize();
 fifty_fifty = (irandom(1) == 1);
 if (fifty_fifty) {
@@ -25,5 +25,4 @@ if (fifty_fifty) {
 	self.EastExit = BMbRoom4;
 	self.NorthExit = BMbRoom1;
 }
-//room_goto(WestExit);
 

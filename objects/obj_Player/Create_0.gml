@@ -1,5 +1,3 @@
-//x = 1920 / 2;
-//y = 1080 / 2;
 persistent = true;
 obj_Player.health = 100
 obj_Player.canShoot = true

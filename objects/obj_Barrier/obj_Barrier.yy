@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite9",
-    "path":"sprites/Sprite9/Sprite9.yy",
+    "name":"spr_BlueWall",
+    "path":"sprites/spr_BlueWall/spr_BlueWall.yy",
   },
   "spriteMaskId":null,
   "visible":false,

@@ -1,5 +1,5 @@
-//For doors that go in the same side it comes out (like east -> east),
-//Disable moving in that direction long enough for player to react
+// For doors that go in the same side it comes out (like east -> east),
+// Disable moving in that direction long enough for player to react
 
 if (other.result == "N") {
 	alarm[0] = 27;

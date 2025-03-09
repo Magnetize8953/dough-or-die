@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Taft",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_KillYou",
+  "eventList":[],
   "managed":true,
-  "name":"obj_Taft",
+  "name":"obj_KillYou",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Taft",
-    "path":"sprites/spr_Taft/spr_Taft.yy",
+    "name":"spr_KillYou",
+    "path":"sprites/spr_KillYou/spr_KillYou.yy",
   },
   "spriteMaskId":null,
   "visible":true,

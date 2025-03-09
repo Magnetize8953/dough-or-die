@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Room2Door",
-    "path":"sprites/Room2Door/Room2Door.yy",
+    "name":"spr_Room2Door",
+    "path":"sprites/spr_Room2Door/spr_Room2Door.yy",
   },
   "spriteMaskId":null,
   "visible":true,
