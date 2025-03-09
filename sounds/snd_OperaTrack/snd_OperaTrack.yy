@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_explosion2",
+  "%Name":"snd_OperaTrack",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.91225,
-  "name":"snd_explosion2",
+  "duration":110.23673,
+  "name":"snd_OperaTrack",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_explosion2.wav",
+  "soundFile":"snd_OperaTrack.ogg",
   "type":0,
-  "volume":0.41,
+  "volume":1.0,
 }
