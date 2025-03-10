@@ -20,6 +20,6 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_OperaTrack.ogg",
-  "type":0,
+  "type":2,
   "volume":1.0,
 }
