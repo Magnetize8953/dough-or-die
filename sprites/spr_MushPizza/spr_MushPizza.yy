@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_MushPizza",
   "bboxMode":0,
-  "bbox_bottom":30,
+  "bbox_bottom":101,
   "bbox_left":0,
-  "bbox_right":31,
+  "bbox_right":104,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -23,7 +23,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":32,
+  "height":105,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"e65e23cc-c79f-47df-8a85-2f2962c506b5","blendMode":0,"displayName":"default","isLocked":false,"name":"e65e23cc-c79f-47df-8a85-2f2962c506b5","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -114,5 +114,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":32,
+  "width":105,
 }
