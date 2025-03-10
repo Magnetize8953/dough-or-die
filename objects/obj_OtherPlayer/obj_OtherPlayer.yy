@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_PepPizza",
-    "path":"sprites/spr_PepPizza/spr_PepPizza.yy",
+    "name":"spr_MushPizza",
+    "path":"sprites/spr_MushPizza/spr_MushPizza.yy",
   },
   "spriteMaskId":null,
   "visible":true,
