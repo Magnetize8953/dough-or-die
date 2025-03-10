@@ -1,21 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_SundaeShrine",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_ShrineMessage",
+  "eventList":[],
   "managed":true,
-  "name":"obj_SundaeShrine",
+  "name":"obj_ShrineMessage",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_Barrier",
-    "path":"objects/obj_Barrier/obj_Barrier.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_SundaeShrine",
-    "path":"sprites/spr_SundaeShrine/spr_SundaeShrine.yy",
+    "name":"spr_ShrineMessage",
+    "path":"sprites/spr_ShrineMessage/spr_ShrineMessage.yy",
   },
   "spriteMaskId":null,
   "visible":true,

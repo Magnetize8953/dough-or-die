@@ -1,3 +1,5 @@
+global.map_generated = false;
+
 // Iterate through every room to initialize all room holders
 // Made in assistance with ChatGPT for how to iterate through rooms
 // Logic is partially original work, partially that of ChatGPT (transforming for loop into Alarm loop)

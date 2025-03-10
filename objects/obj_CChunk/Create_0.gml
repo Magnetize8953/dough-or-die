@@ -4,6 +4,7 @@ self.persistent = true;
 // Remaining code and data structure is original work
 randomize();
 fifty_fifty = (irandom(1) == 1);
+fifty_fifty = 0; //REMOVE
 if (fifty_fifty) {
 	RoomList[0] = CaRoom1;
 	RoomList[1] = CaRoom2;
