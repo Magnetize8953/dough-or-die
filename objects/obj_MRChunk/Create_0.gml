@@ -1,4 +1,7 @@
 self.persistent = true;
+//self.room_list = RoomList;
+RoomList = [];
+
 
 //Random choice conditional produced with ChatGPT's assistance to debug random seed not resetting properly
 //Remaining code and data structure is original work
