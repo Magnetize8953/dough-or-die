@@ -1,4 +1,4 @@
-/// show_debug_message("Is room mapped: " + string(ds_map_find_value(global.room_object_map, room_get_name(BRaRoom1))));
+// show_debug_message("Is room mapped: " + string(ds_map_find_value(global.room_object_map, room_get_name(BRaRoom1))));
 
 global.TL = instance_create_layer(0, -10, "Instances", obj_TLChunk);
 global.tl_east = ds_map_find_value(global.room_object_map, room_get_name(global.TL.EastExit));
@@ -42,5 +42,6 @@ global.BR = instance_create_layer(40, -10, "Instances", obj_BRChunk);
 global.br_north = ds_map_find_value(global.room_object_map, room_get_name(global.BR.NorthExit));
 global.br_west = ds_map_find_value(global.room_object_map, room_get_name(global.BR.WestExit));
 
+global.path_finder = instance_create_layer(0, 0, "Instances", obj_path_finder);
 
-room_goto(CaRoomHeart);
+room_goto(global.ML.RoomList[0]);

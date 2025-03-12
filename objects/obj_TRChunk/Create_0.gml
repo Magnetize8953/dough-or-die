@@ -14,6 +14,9 @@ if (fifty_fifty) {
 	self.SouthExit = TRaRoom1;
 	self.WestExit = TRaRoom5;
 	
+	
+	show_debug_message("TRChunk selected: A variant, first room = " + RoomList[0]);
+	
 } else {
 	RoomList[0] = TRbRoom1;
 	RoomList[1] = TRbRoom2;
@@ -22,5 +25,8 @@ if (fifty_fifty) {
 	RoomList[4] = TRbRoom5;
 	self.SouthExit = TRbRoom1;
 	self.WestExit = TRbRoom5;
+	
+	
+	show_debug_message("TRChunk selected: B variant, first room = " + RoomList[0]);
 }
 

@@ -27,6 +27,8 @@ if (fifty_fifty) {
 	self.WestExit = CaRoom14;
 	self.EastExit = CaRoom16;
 	
+	show_debug_message("CCChunk selected: A variant, first room = " + RoomList[0]);
+	
 } else {
 	RoomList[0] = CbRoom1;
 	RoomList[1] = CbRoom2;
@@ -41,5 +43,7 @@ if (fifty_fifty) {
 	self.WestExit = CbRoom3;
 	self.NorthExit = CbRoom6;
 	self.EastExit = CbRoom7;
+	
+	show_debug_message("CCChunk selected: B variant, first room = " + RoomList[0]);
 }
 

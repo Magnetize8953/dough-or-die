@@ -14,6 +14,8 @@ if (fifty_fifty) {
 	self.NorthExit = BMaRoom5;
 	self.WestExit = BMaRoom2;
 	
+	show_debug_message("BMChunk selected: A variant, first room = " + RoomList[0]);
+	
 } else {
 	RoomList[0] = BMbRoom1;
 	RoomList[1] = BMbRoom2;
@@ -24,5 +26,7 @@ if (fifty_fifty) {
 	self.WestExit = BMbRoom3;
 	self.EastExit = BMbRoom4;
 	self.NorthExit = BMbRoom1;
+	
+	show_debug_message("BMChunk selected: B variant, first room = " + RoomList[0]);
 }
 

@@ -13,6 +13,8 @@ if (fifty_fifty) {
 	RoomList[5] = BLaRoom6;
 	self.EastExit = BLaRoom4;
 	self.NorthExit = BLaRoom1;
+	
+	show_debug_message("BLChunk selected: A variant, first room = " + RoomList[0]);
 
 } else {
 	RoomList[0] = BLbRoom1;
@@ -22,5 +24,7 @@ if (fifty_fifty) {
 	RoomList[4] = BLbRoom5;
 	self.EastExit = BLbRoom2;
 	self.NorthExit = BLbRoom1;
+	
+	show_debug_message("BLChunk selected: B variant, first room = " + RoomList[0]);
 }
 

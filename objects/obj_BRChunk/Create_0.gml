@@ -13,6 +13,8 @@ if (fifty_fifty) {
 	self.WestExit = BRaRoom5;
 	self.NorthExit = BRaRoom1;
 	
+	show_debug_message("BRChunk selected: A variant, first room = " + RoomList[0]);
+	
 } else {
 	RoomList[0] = BRbRoom1;
 	RoomList[1] = BRbRoom2;
@@ -24,5 +26,7 @@ if (fifty_fifty) {
 	RoomList[7] = BRbRoom8;
 	self.WestExit = BRbRoom8;
 	self.NorthExit = BRbRoom1;
+	
+	show_debug_message("BRChunk selected: B variant, first room = " + RoomList[0]);
 }
 

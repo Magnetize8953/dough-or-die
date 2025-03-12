@@ -13,6 +13,8 @@ if (fifty_fifty) {
 	self.SouthExit = TLaRoom1;
 	self.EastExit = TLaRoom1;
 	
+	show_debug_message("TLChunk selected: A variant, first room = " + RoomList[0]);
+	
 } else {
 	RoomList[0] = TLbRoom1;
 	RoomList[1] = TLbRoom2;
@@ -21,5 +23,8 @@ if (fifty_fifty) {
 	RoomList[4] = TLbRoom5;
 	self.SouthExit = TLbRoom1;
 	self.EastExit = TLbRoom5;
+	
+	
+	show_debug_message("TLChunk selected: B variant, first room = " + RoomList[0]);
 }
 

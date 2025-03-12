@@ -15,6 +15,8 @@ if (fifty_fifty) {
 	self.SouthExit = MRaRoom4;
 	self.NorthExit = MRaRoom4;
 	
+	show_debug_message("MRChunk selected: A variant, first room = " + RoomList[0]);
+	
 } else {
 	RoomList[0] = MRbRoom1;
 	RoomList[1] = MRbRoom2;
@@ -24,6 +26,8 @@ if (fifty_fifty) {
 	self.SouthExit = MRbRoom2;
 	self.NorthExit = MRbRoom4;
 	self.WestExit = MRbRoom4;
+	
+	show_debug_message("MRChunk selected: B variant, first room = " + RoomList[0]);
 	/*
 	for (i = 0; i < 8; i++){
 		 //Non-existence check written with help of ChatGPT
