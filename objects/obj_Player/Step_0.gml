@@ -54,14 +54,9 @@ if keyboard_check(ord("W")) || keyboard_check(ord("A")) || keyboard_check(ord("S
 }
 
 
-if keyboard_check_pressed(ord("R")){
+if !keyboard_check(vk_alt) and keyboard_check_pressed(ord("R")){
 	instance_deactivate_all(false);
 	game_restart();
-}
-
-// JUMP TO OTHER CHUNK TO TEST
-if keyboard_check_pressed(ord("B")) {
-	room_goto(BMbRoom1);
 }
 
 

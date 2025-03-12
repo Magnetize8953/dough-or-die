@@ -56,7 +56,12 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"InstructionHeart.png","CopyToMask":-1,"filePath":"datafiles","name":"InstructionHeart.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"InstructionHydra.png","CopyToMask":-1,"filePath":"datafiles","name":"InstructionHydra.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"InstructionSpades.png","CopyToMask":-1,"filePath":"datafiles","name":"InstructionSpades.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"InstructionTafty.png","CopyToMask":-1,"filePath":"datafiles","name":"InstructionTafty.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"main_menu.png","CopyToMask":-1,"filePath":"datafiles","name":"main_menu.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"Quattrocento-Regular.ttf","CopyToMask":-1,"filePath":"datafiles","name":"Quattrocento-Regular.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"spr_button.png","CopyToMask":-1,"filePath":"datafiles","name":"spr_button.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
@@ -67,6 +72,7 @@
   "name":"dough-or-die",
   "resources":[
     {"id":{"name":"fnt_main","path":"fonts/fnt_main/fnt_main.yy",},},
+    {"id":{"name":"fnt_mini","path":"fonts/fnt_mini/fnt_mini.yy",},},
     {"id":{"name":"obj_25OfSpades","path":"objects/obj_25OfSpades/obj_25OfSpades.yy",},},
     {"id":{"name":"obj_ArrowSign","path":"objects/obj_ArrowSign/obj_ArrowSign.yy",},},
     {"id":{"name":"obj_Barrier","path":"objects/obj_Barrier/obj_Barrier.yy",},},

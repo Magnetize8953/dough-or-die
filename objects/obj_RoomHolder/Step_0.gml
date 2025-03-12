@@ -235,3 +235,13 @@ if (!position_meeting(1910 - obj_Go2Room.sprite_xoffset, 1080 / 2, obj_Go2Room) 
 	instance_destroy(instance_place(1910 - obj_Go2Room.sprite_xoffset, 1080 / 2, obj_Go2Room));
 	instance_create_layer(1910 - obj_Go2Room.sprite_xoffset, 1080 / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.east_connect, result : self.east_result});
 }
+
+
+// Cheat code - draws room name if cheat code is entered; toggles on/off with alt+R
+if keyboard_check(vk_alt) and keyboard_check_pressed(ord("R")) and variable_global_exists("cheat_code_room_name") {
+	if !global.cheat_code_room_name {
+		global.cheat_code_room_name = true;
+	} else {
+		global.cheat_code_room_name = false;
+	}
+}
