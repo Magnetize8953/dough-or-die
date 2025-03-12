@@ -1,1 +1,1 @@
-pos += scroll_rate;
+pos -= scroll_rate;

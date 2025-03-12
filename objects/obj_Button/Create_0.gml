@@ -3,3 +3,4 @@ _time = 0.0;
 
 hovering = false;
 
+depth = 2;
