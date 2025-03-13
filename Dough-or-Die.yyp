@@ -85,6 +85,7 @@
     {"id":{"name":"obj_Game","path":"objects/obj_Game/obj_Game.yy",},},
     {"id":{"name":"obj_Go2Room","path":"objects/obj_Go2Room/obj_Go2Room.yy",},},
     {"id":{"name":"obj_Gramophone","path":"objects/obj_Gramophone/obj_Gramophone.yy",},},
+    {"id":{"name":"obj_IPEntry","path":"objects/obj_IPEntry/obj_IPEntry.yy",},},
     {"id":{"name":"obj_KillYou","path":"objects/obj_KillYou/obj_KillYou.yy",},},
     {"id":{"name":"obj_MapAssembler","path":"objects/obj_MapAssembler/obj_MapAssembler.yy",},},
     {"id":{"name":"obj_MapAssemblerPartB","path":"objects/obj_MapAssemblerPartB/obj_MapAssemblerPartB.yy",},},
@@ -188,6 +189,7 @@
     {"id":{"name":"MRbRoom5","path":"rooms/MRbRoom5/MRbRoom5.yy",},},
     {"id":{"name":"Player1Base","path":"rooms/Player1Base/Player1Base.yy",},},
     {"id":{"name":"Player2Base","path":"rooms/Player2Base/Player2Base.yy",},},
+    {"id":{"name":"PlayMenu","path":"rooms/PlayMenu/PlayMenu.yy",},},
     {"id":{"name":"SettingsMenu","path":"rooms/SettingsMenu/SettingsMenu.yy",},},
     {"id":{"name":"TLaRoom1","path":"rooms/TLaRoom1/TLaRoom1.yy",},},
     {"id":{"name":"TLaRoom2","path":"rooms/TLaRoom2/TLaRoom2.yy",},},
@@ -374,6 +376,7 @@
     {"roomId":{"name":"CbRoom7","path":"rooms/CbRoom7/CbRoom7.yy",},},
     {"roomId":{"name":"CbRoom8","path":"rooms/CbRoom8/CbRoom8.yy",},},
     {"roomId":{"name":"CbRoomHeart","path":"rooms/CbRoomHeart/CbRoomHeart.yy",},},
+    {"roomId":{"name":"PlayMenu","path":"rooms/PlayMenu/PlayMenu.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
