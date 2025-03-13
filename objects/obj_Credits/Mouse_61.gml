@@ -1,0 +1,1 @@
+pos += scroll_rate;

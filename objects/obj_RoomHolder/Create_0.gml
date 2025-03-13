@@ -27,5 +27,3 @@ if self.east_connect != noone {
 }
 
 myself = ds_map_find_value(global.room_object_map, room_get_name(self.associated_room));
-
-is_bm_east_check = true;

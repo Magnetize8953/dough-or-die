@@ -54,14 +54,24 @@ if keyboard_check(ord("W")) || keyboard_check(ord("A")) || keyboard_check(ord("S
 }
 
 
-if keyboard_check_pressed(ord("R")){
+if !keyboard_check(vk_alt) and keyboard_check_pressed(ord("R")){
 	instance_deactivate_all(false);
 	game_restart();
 }
 
-// JUMP TO OTHER CHUNK TO TEST
-if keyboard_check_pressed(ord("B")) {
-	room_goto(BMbRoom1);
+// If the center chunk has been made, and its the B option (has secret room)
+if variable_global_exists("C") {
+	if global.C.RoomList[0] == CbRoom1 {
+		// If all three buttons pressed, jump to secret room and set tracking to false
+		if buttons_pressed[0] and buttons_pressed[1] and buttons_pressed[2] {
+			room_goto(CbRoomHeart);
+			x = 300;
+			 y = 810;
+			buttons_pressed[0] = false;
+			buttons_pressed[1] = false;
+			buttons_pressed[2] = false;
+		}
+	}
 }
 
 // networking

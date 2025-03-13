@@ -1,3 +1,10 @@
+// Pauses any playing music
+with(obj_Gramophone) {
+	if audio_is_playing(snd_OperaTrack) {
+		audio_pause_sound(snd_OperaTrack);
+	}
+}
+
 // Moves to room door is connected to
 
 room_goto(room_link);
