@@ -1,3 +1,8 @@
+// TODO: Make a better way to handle before the player is made
+if (!instance_exists(obj_Player)) {
+    return;
+}
+
 var event_id = async_load[? "id"];
 
 if (event_id == client_socket && event_id != 1) {
@@ -39,7 +44,7 @@ if (event_id == client_socket && event_id != 1) {
         
         other_player.current_room = other_player_room;
         
-        if obj_Player.current_room != other_player_room {
+        if (obj_Player.current_room != other_player_room) {
             other_player.visible = 0;
             other_player.x = room_width / 2;
             other_player.y = room_height / 2;

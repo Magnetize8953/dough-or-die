@@ -26,6 +26,11 @@ for (var i = 0; i < instance_number(obj_OtherPlayer); i++) {
     }
 }
 
+// TODO: Make a better way to handle before the player is made
+if (!instance_exists(obj_Player)) {
+    return;
+}
+
 // send host information to everyone
 // only send location if it has changed
 if (obj_Player.x != host_x || obj_Player.y != host_y) {

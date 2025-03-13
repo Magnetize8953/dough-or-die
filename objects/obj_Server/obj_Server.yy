@@ -14,7 +14,10 @@
     "name":"Networking",
     "path":"folders/Objects/Networking.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_InitNetwork",
+    "path":"objects/obj_InitNetwork/obj_InitNetwork.yy",
+  },
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

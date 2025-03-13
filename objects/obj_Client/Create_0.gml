@@ -1,13 +1,10 @@
-client_socket = network_create_socket(network_socket_tcp);
-ip = "127.0.0.1";
-port = 50000;
+// Attribution: Corvo, https://www.youtube.com/channel/UCZvLFOWD6r7Cj11Rrp9Rpzg
+// [Tutorial - Parte 1] Networking no GameMaker✨, https://youtu.be/tA3_2_aQTtM
+// [Tutorial - Parte 2] Networking no GameMaker✨, https://youtu.be/-jxIrGDo61k
+// actually showcased and explained networking in GameMaker
+
+event_inherited();
 
 buffer = buffer_create(16384, buffer_grow, 1);
 // associates player ids with objects
 elements = ds_map_create();
-
-connection = network_connect(client_socket, ip, port);
-if (connection < 0) {
-    show_debug_message("failed to connect to server");
-    instance_destroy(self);
-}

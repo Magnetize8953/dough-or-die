@@ -1,3 +1,8 @@
+// TODO: Make a better way to handle before the player is made
+if (!instance_exists(obj_Player)) {
+    return;
+}
+
 // send location data to server
 buffer_seek(buffer, buffer_seek_start, 1);
 buffer_write(buffer, buffer_u8, NETWORK.MOVEMENT);
