@@ -3,7 +3,7 @@ draw_set_font(fnt_main);
 
 
 // Set our global variables to noone
-/*
+global.room_object_map = noone
 global.TL = noone;
 global.TM = noone;
 global.TR = noone;
@@ -31,12 +31,11 @@ global.mr_north = noone;
 global.mr_west = noone;
 global.mr_south = noone;
 global.bl_north = noone;
-global.bl_west = noone;
+global.bl_east = noone;
 global.bm_north = noone;
 global.bm_west = noone;
 global.bm_east = noone;
 global.br_north = noone;
-global.bl_west = noone;
+global.br_west = noone;
 global.cheat_code_room_name = false;
 global.map_generated = false;
-*/

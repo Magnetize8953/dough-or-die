@@ -60,7 +60,7 @@ if !keyboard_check(vk_alt) and keyboard_check_pressed(ord("R")){
 }
 
 // If the center chunk has been made, and its the B option (has secret room)
-if variable_global_exists("C") {
+if global.C != noone {
 	if global.C.RoomList[0] == CbRoom1 {
 		// If all three buttons pressed, jump to secret room and set tracking to false
 		if buttons_pressed[0] and buttons_pressed[1] and buttons_pressed[2] {
