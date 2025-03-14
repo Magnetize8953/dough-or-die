@@ -43,11 +43,6 @@ global.br_north = ds_map_find_value(global.room_object_map, room_get_name(global
 global.br_west = ds_map_find_value(global.room_object_map, room_get_name(global.BR.WestExit));
 
 
-//room_goto(global.C.RoomList[0]);
 room_goto(Player1Base);
-//room_goto(CaRoomHeart);
-//room_goto(TRaRoom4);
 
 global.map_generated = true;
-
-show_debug_message(room_get_name(global.BR.RoomList[0]));

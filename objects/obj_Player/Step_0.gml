@@ -83,8 +83,7 @@ if variable_global_exists("C") {
 		// If all three buttons pressed, jump to secret room and set tracking to false
 		if buttons_pressed[0] and buttons_pressed[1] and buttons_pressed[2] {
 			room_goto(CbRoomHeart);
-			x = 300;
-			 y = 810;
+			x = 300; y = 810;
 			buttons_pressed[0] = false;
 			buttons_pressed[1] = false;
 			buttons_pressed[2] = false;
