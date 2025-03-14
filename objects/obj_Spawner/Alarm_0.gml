@@ -1,4 +1,4 @@
-if (variable_instance_exists(id, global.map_generated) && global.map_generated) {
+if (variable_global_exists("map_generated") and global.map_generated) {
     randomize();
     
     // one-in-eight chance of spawning power-up
@@ -14,7 +14,7 @@ if (variable_instance_exists(id, global.map_generated) && global.map_generated) 
             instance_create_layer(randx, randy, "Instances", obj_25OfSpades); 
         } else if powerup == 1 { // Create Ghost of Taft
             instance_create_layer(randx, randy, "Instances", obj_Taft);
-        } else { //C reate Hydra
+        } else { //Create Hydra
             instance_create_layer(randx, randy, "Instances", obj_Hydra);
         }
         
