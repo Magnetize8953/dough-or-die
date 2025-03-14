@@ -1,3 +1,10 @@
+// If health less than 0, destroy
+/*
+if self.health <= 0 {
+	instance_destroy();
+}
+*/
+
 // Handles checking if the player has picked up a speed boost
 if (speed_timer > 0) {
     speed_timer -= 1;
@@ -9,6 +16,7 @@ if (speed_timer > 0) {
 	}
 }
 
+// Handles the player going invisible and invincible
 if (invis_timer > 0) {
 	invis_timer -= 1;
 	item_timer -= 1;
@@ -21,14 +29,23 @@ if (invis_timer > 0) {
 	}
 }
 
+// Handles if player spawns decoy
+if can_spawn and keyboard_check_pressed(ord("C")) {
+	can_spawn = false;
+	instance_create_layer(x, y, "Instances", obj_PepDecoy);
+}
+
+
 
 // Movement
 if keyboard_check(ord("A")) and !instance_place(x - move_speed, y, obj_Barrier) and !self.disable_west {
 	x -= self.move_speed;
+	image_xscale = -1;
 }
 
 if keyboard_check(ord("D")) and !instance_place(x + move_speed, y, obj_Barrier) and !self.disable_east {
 	x += self.move_speed;
+	image_xscale = 1;
 }
 
 if keyboard_check(ord("W")) and !instance_place(x, y - move_speed, obj_Barrier) and !self.disable_north {
@@ -59,11 +76,6 @@ if keyboard_check_pressed(ord("R")){
 	game_restart();
 }
 
-// JUMP TO OTHER CHUNK TO TEST
-if keyboard_check_pressed(ord("B")) {
-	room_goto(BMbRoom1);
-}
-
 
 // If the center chunk has been made, and its the B option (has secret room)
 if variable_global_exists("C") {
@@ -71,8 +83,7 @@ if variable_global_exists("C") {
 		// If all three buttons pressed, jump to secret room and set tracking to false
 		if buttons_pressed[0] and buttons_pressed[1] and buttons_pressed[2] {
 			room_goto(CbRoomHeart);
-			x = 300;
-			 y = 810;
+			x = 300; y = 810;
 			buttons_pressed[0] = false;
 			buttons_pressed[1] = false;
 			buttons_pressed[2] = false;
