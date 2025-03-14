@@ -10,8 +10,8 @@
   "name":"obj_MapAssembler",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"DataStructure",
+    "path":"folders/Objects/DataStructure.yy",
   },
   "parentObjectId":null,
   "persistent":true,

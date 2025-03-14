@@ -10,8 +10,8 @@
   "name":"obj_Gramophone",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"RoomStuffs",
+    "path":"folders/Objects/RoomStuffs.yy",
   },
   "parentObjectId":null,
   "persistent":false,
