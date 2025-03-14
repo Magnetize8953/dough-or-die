@@ -5,6 +5,7 @@
 
 // packet identifiers
 enum NETWORK {
+    MAP_INFO,
     ADD_ELEMENT,
     DELETE_ELEMENT,
     MOVEMENT,

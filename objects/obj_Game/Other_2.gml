@@ -3,7 +3,7 @@ draw_set_font(fnt_main);
 
 
 // Set our global variables to noone
-global.room_object_map = noone
+global.room_object_map = noone;
 global.TL = noone;
 global.TM = noone;
 global.TR = noone;

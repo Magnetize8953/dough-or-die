@@ -32,8 +32,9 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"server_ip","filters":[],"listItems":[],"multiselect":false,"name":"server_ip","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
-    {"$GMObjectProperty":"v1","%Name":"connection","filters":[],"listItems":[],"multiselect":false,"name":"connection","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"client_socket","filters":[],"listItems":[],"multiselect":false,"name":"client_socket","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"port","filters":[],"listItems":[],"multiselect":false,"name":"port","rangeEnabled":false,"rangeMax":65535.0,"rangeMin":1.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"50000","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"connection","filters":[],"listItems":[],"multiselect":false,"name":"connection","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

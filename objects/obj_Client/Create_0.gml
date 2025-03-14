@@ -8,3 +8,5 @@ event_inherited();
 buffer = buffer_create(16384, buffer_grow, 1);
 // associates player ids with objects
 elements = ds_map_create();
+
+server_rooms = ds_map_create();

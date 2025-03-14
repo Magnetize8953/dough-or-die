@@ -1,9 +1,5 @@
-self.persistent = true;
+event_inherited();
 
-// Random choice conditional produced with ChatGPT's assistance to debug random seed not resetting properly
-// Remaining code and data structure is original work
-randomize();
-fifty_fifty = (irandom(1) == 1);
 if (fifty_fifty) {
 	RoomList[0] = BMaRoom1;
 	RoomList[1] = BMaRoom2;
@@ -25,4 +21,3 @@ if (fifty_fifty) {
 	self.EastExit = BMbRoom4;
 	self.NorthExit = BMbRoom1;
 }
-

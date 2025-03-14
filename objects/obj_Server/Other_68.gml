@@ -10,6 +10,27 @@ if (event_id == server) {
         var new_player = instance_create_layer(0, 0, "Instances", obj_OtherPlayer);
         ds_map_add(clients, socket, new_player);
         
+        // send map information
+        #region send map info
+        
+        buffer_seek(buffer, buffer_seek_start, 1);
+        buffer_write(buffer, buffer_u8, NETWORK.MAP_INFO);
+        
+        // send whether or not a chunk is the A version
+        buffer_write(buffer, buffer_bool, global.TL.EastExit == TLaRoom1 ? true : false)
+        buffer_write(buffer, buffer_bool, global.TM.WestExit == TMaRoom1 ? true : false)
+        buffer_write(buffer, buffer_bool, global.TR.WestExit == TRaRoom5 ? true : false)
+        buffer_write(buffer, buffer_bool, global.ML.EastExit == MLaRoom4 ? true : false)
+        buffer_write(buffer, buffer_bool, global.C.NorthExit == CaRoom1  ? true : false)
+        buffer_write(buffer, buffer_bool, global.MR.WestExit == MRaRoom3 ? true : false)
+        buffer_write(buffer, buffer_bool, global.BL.EastExit == BLaRoom4 ? true : false)
+        buffer_write(buffer, buffer_bool, global.BM.EastExit == BMaRoom1 ? true : false)
+        buffer_write(buffer, buffer_bool, global.BR.WestExit == BRaRoom5 ? true : false)
+        
+        network_send_packet(socket, buffer, buffer_tell(buffer));
+        
+        #endregion
+        
         for (var i = 0; i < instance_number(obj_OtherPlayer); i++) {
             // give new player old players information
             var other_player = instance_find(obj_OtherPlayer, i);

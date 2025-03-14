@@ -12,6 +12,23 @@ if (event_id == client_socket && event_id != 1) {
     var identifier = buffer_read(connection_buffer, buffer_u8);
     show_debug_message(identifier);
     
+    if (identifier == NETWORK.MAP_INFO) {
+        
+        // read weather the chunk is the A version
+        ds_map_add(server_rooms, "TL", buffer_read(connection_buffer, buffer_bool))
+        ds_map_add(server_rooms, "TM", buffer_read(connection_buffer, buffer_bool))
+        ds_map_add(server_rooms, "TR", buffer_read(connection_buffer, buffer_bool))
+        ds_map_add(server_rooms, "ML", buffer_read(connection_buffer, buffer_bool))
+        ds_map_add(server_rooms, "C",  buffer_read(connection_buffer, buffer_bool))
+        ds_map_add(server_rooms, "MR", buffer_read(connection_buffer, buffer_bool))
+        ds_map_add(server_rooms, "BL", buffer_read(connection_buffer, buffer_bool))
+        ds_map_add(server_rooms, "BM", buffer_read(connection_buffer, buffer_bool))
+        ds_map_add(server_rooms, "BR", buffer_read(connection_buffer, buffer_bool))
+        
+        return;
+        
+    }
+    
     var other_player_id = buffer_read(connection_buffer, buffer_u16);
     // ignore packets regarding self
     if (other_player_id == obj_Player.id) {

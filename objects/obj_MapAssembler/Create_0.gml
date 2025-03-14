@@ -18,4 +18,3 @@ if (room_exists(room_holder)) {
 	room_goto(room_holder);
 	alarm[1] = 10;
 }
-

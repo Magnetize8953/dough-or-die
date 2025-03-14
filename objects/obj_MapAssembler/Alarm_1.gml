@@ -1,3 +1,9 @@
+if (instance_exists(obj_Client)) {
+    if (is_undefined(obj_Client.server_rooms[? "TR"])) {
+        alarm[1] = 5;
+        return;
+    }
+}
 
 instance_activate_all(); // Method provided via ChatGPT
 

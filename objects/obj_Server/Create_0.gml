@@ -5,8 +5,9 @@
 
 event_inherited();
 
-max_clients = 4;
-port = 50000;
+// Moved to instance variables
+// max_clients = 4;
+// port = 50000;
 
 // associates sockets with players
 clients = ds_map_create();
