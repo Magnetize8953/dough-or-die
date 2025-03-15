@@ -27,3 +27,9 @@ if self.east_connect != noone {
 }
 
 myself = ds_map_find_value(global.room_object_map, room_get_name(self.associated_room));
+
+is_bm_east_check = true;
+
+if self.associated_room != Player1Base and self.associated_room != Player2Base and self.associated_room != CaRoomHeart and self.associated_room != CbRoomHeart and !instance_exists(obj_KillYou) {
+	instance_create_layer(400, 400, "Instances", obj_Spawner);
+}

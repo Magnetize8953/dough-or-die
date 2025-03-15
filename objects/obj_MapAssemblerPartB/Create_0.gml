@@ -73,3 +73,5 @@ if (!instance_exists(obj_Client)) {
 }
 
 global.map_generated = true;
+
+instance_create_layer(500, 400, "Instances", obj_Player);
