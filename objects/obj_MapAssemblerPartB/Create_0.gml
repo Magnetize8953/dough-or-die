@@ -14,10 +14,6 @@ if (!instance_exists(obj_Client)) { // server or solo
     
 } else { // joining server
     
-    // busy waiting for server room packets to arrive
-    // BR is the last room to be sent
-    while (is_undefined(obj_Client.server_rooms[? "BR"])) {}
-    
     // preset is a boolean for if the chunk is the A version
     global.TL = instance_create_layer(0, -10,  "Instances", obj_TLChunk, { preset : obj_Client.server_rooms[? "TL"] });
     global.TM = instance_create_layer(5, -10,  "Instances", obj_TMChunk, { preset : obj_Client.server_rooms[? "TM"] });

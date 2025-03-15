@@ -5,7 +5,7 @@ if (option != noone && string_count("quit", option) > 0) {
 }
 if (obj != noone) {
     instance_destroy(obj_Popup);
-    var new_obj = instance_create_layer(room_width / 2, room_height / 2, "Assets_1", obj);
+    var new_obj = instance_create_layer(room_width / 2, room_height / 2, "Instances", obj);
     new_obj.image_speed = 0;
     new_obj.image_index = sprite_num;
 }

@@ -1,11 +1,7 @@
 // If health less than 0, destroy
-
 if self.health <= 0 {
-	instance_destroy();
+	scr_PlayerDeath();
 }
-
-
-
 
 // Handles checking if the player has picked up a speed boost
 if (speed_timer > 0) {

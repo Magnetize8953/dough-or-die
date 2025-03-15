@@ -1,5 +1,7 @@
+// busy waiting for server room packets to arrive
+// BR is the last room to be sent
 if (instance_exists(obj_Client)) {
-    if (is_undefined(obj_Client.server_rooms[? "TR"])) {
+    if (is_undefined(obj_Client.server_rooms[? "BR"])) {
         alarm[1] = 5;
         return;
     }
