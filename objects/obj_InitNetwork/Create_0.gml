@@ -12,6 +12,7 @@ enum NETWORK {
     MOVEMENT,
     ITEM,
     ATTACK,
+    DEATH,
 }
 
 enum PICKUPS {

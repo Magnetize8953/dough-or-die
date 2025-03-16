@@ -1,5 +1,5 @@
 if (player_hp <= 0) {
-    scr_PlayerDeath(false);
+    scr_PlayerDeath(self);
 }
 
 if (previous_x > x) {

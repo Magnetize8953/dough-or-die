@@ -15,6 +15,8 @@ server_rooms = ds_map_create();
 // TODO: Handle better
 decoy_rooms = ds_list_create();
 
+client_x = 0;
+client_y = 0;
 client_invis = false;
 client_can_spawn_decoy = false;
 client_has_cutter = false;

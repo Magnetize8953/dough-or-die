@@ -1,19 +1,20 @@
 function scr_PlayerDeath(player){
     
     // reset variables
-    obj_Player.player_hp = 100;
-    obj_Player.falling = false;
-    obj_Player.speed_timer = 0;
-    obj_Player.item_timer = 0;
-    obj_Player.invis_timer = 0;
-    obj_Player.image_xscale = 1;
-    obj_Player.image_yscale = 1;
-    obj_Player.x = 500;
-    obj_Player.y = 500;
+    player.player_hp = 100;
+    player.falling = false;
+    player.speed_timer = 0;
+    player.item_timer = 0;
+    player.invis_timer = 0;
+    player.image_xscale = 1;
+    player.image_yscale = 1;
+    player.x = 500;
+    player.y = 500;
     
     // remove items
-    if (player && obj_Player.wep_held != noone) {
-        instance_destroy(obj_Player.wep_held);
+    if (player.wep_held != noone) {
+        instance_destroy(player.wep_held);
+        player.wep_held = noone;
     }
     
     // solo / server host goes to Player1Base
@@ -23,5 +24,8 @@ function scr_PlayerDeath(player){
     } else {
         room_goto(Player2Base);
     }
+    
+    // just double checking 
+    player.player_hp = 100;
     
 }

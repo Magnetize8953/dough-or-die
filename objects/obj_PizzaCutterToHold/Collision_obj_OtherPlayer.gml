@@ -1,8 +1,8 @@
 target = other;
 
-if !other.is_invis and !damaged and swung {
-    other.player_hp -= 15;
+if (other != my_player && !other.is_invis && !damaged && swung && other.visible == 1) {
+    show_debug_message("damage dealt")
     damaged = true;
 }
 
-alarm[1] = 20;
+alarm[0] = 20;

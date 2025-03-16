@@ -31,7 +31,24 @@ if (!instance_exists(obj_Player)) {
     return;
 }
 
-// send host location to everyone
+// send host information to everyone
+// notify of death
+// image scale is used for falling death
+if (obj_Player.player_hp <= 0 || (obj_Player.image_xscale <= 0.1 || obj_Player.image_yscale <= 0.1 )) {
+    for (var j = 0; j < ds_list_size(sockets); j++) {
+        var socket = ds_list_find_value(sockets, j);
+        
+        buffer_seek(buffer, buffer_seek_start, 1);
+        buffer_write(buffer, buffer_u8, NETWORK.DEATH);
+        buffer_write(buffer, buffer_u16, obj_Player.id);
+        buffer_write(buffer, buffer_u32, 0);
+        buffer_write(buffer, buffer_s16, 0);
+        buffer_write(buffer, buffer_s16, 0);
+        
+        network_send_packet(socket, buffer, buffer_tell(buffer));
+    }
+}
+
 // only send location if it has changed
 if (obj_Player.x != host_x || obj_Player.y != host_y) {
     for (var j = 0; j < ds_list_size(sockets); j++) {
@@ -117,8 +134,7 @@ if (obj_Player.wep_held != noone && !host_has_cutter) {
     }
 }
 
-// TODO: fix random crashes after attacking
-if (host_has_cutter && keyboard_check_pressed(vk_space) && obj_Player.wep_held.swung) {
+if (host_has_cutter && keyboard_check_pressed(vk_space) && obj_Player.wep_held.damaged) {
     for (var j = 0; j < ds_list_size(sockets); j++) {
         var socket = ds_list_find_value(sockets, j);
         
@@ -128,7 +144,11 @@ if (host_has_cutter && keyboard_check_pressed(vk_space) && obj_Player.wep_held.s
         buffer_write(buffer, buffer_u32, 0);
         buffer_write(buffer, buffer_s16, 0);
         buffer_write(buffer, buffer_s16, 0);
-        buffer_write(buffer, buffer_u16, obj_Player.wep_held.target);
+        if (!is_undefined(obj_Player.wep_held.target)) {
+            buffer_write(buffer, buffer_u16, obj_Player.wep_held.target);
+        } else {
+            buffer_write(buffer, buffer_u16, 0);
+        }
         
         network_send_packet(socket, buffer, buffer_tell(buffer));
     }

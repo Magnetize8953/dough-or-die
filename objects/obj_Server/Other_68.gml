@@ -62,7 +62,7 @@ if (event_id == server) {
             buffer_write(buffer, buffer_s16, new_player.y);
             
             network_send_packet(other_player_socket, buffer, buffer_tell(buffer));
-
+            
         }
         
         // give new player server host information
@@ -111,6 +111,8 @@ if (event_id == server) {
     
     buffer_seek(connection_buffer, buffer_seek_start, 1);
     var identifier = buffer_read(connection_buffer, buffer_u8);
+    show_debug_message("server received: " + string(identifier));
+    
     var player_id_ = buffer_read(connection_buffer, buffer_u16);
     var player_room = buffer_read(connection_buffer, buffer_u32);
     var player_x = buffer_read(connection_buffer, buffer_s16);
@@ -154,17 +156,14 @@ if (event_id == server) {
             
             var cutter = instance_create_layer(player_x, player_y, "Instances", obj_PizzaCutterToHold);
             cutter.my_player = player;
-            player.cutter = cutter;
+            player.wep_held = cutter;
             
         }
         
     } else if (identifier == NETWORK.ATTACK) {
         
-        // TODO: fix random crashes after attacking
-        
-        with (player.cutter) {
+        with (player.wep_held) {
             image_index++;
-            swung = true;
             alarm[0] = 30;
         }
         
@@ -172,10 +171,21 @@ if (event_id == server) {
         
         // 65532 is what you get when you do 2s complement to -4
         // -4 is noone
-        if (target_player_id != 65532) {
+        if (target_player_id != 65532 && target_player_id != 0) {
             if (!is_undefined(obj_Player) && obj_Player.player_hp > 0) {
                 obj_Player.player_hp -= 15;
+                
+                if (obj_Player.player_hp <= 0) {
+                    player.wep_held.target = noone;
+                }
             }
+        }
+        
+    } else if (identifier == NETWORK.DEATH) {
+        
+        if (player.wep_held != noone) {
+            instance_destroy(player.wep_held);
+            player.wep_held = noone;
         }
         
     }

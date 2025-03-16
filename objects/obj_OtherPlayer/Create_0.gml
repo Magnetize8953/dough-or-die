@@ -1,6 +1,6 @@
 current_room = room;
 is_invis = false;
-cutter = noone;
+wep_held = noone;
 player_hp = 100;
 
 previous_x = x;

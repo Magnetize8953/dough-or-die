@@ -5,7 +5,7 @@ if (event_id == client_socket && event_id != 1) {
     var connection_buffer = async_load[? "buffer"];
     buffer_seek(connection_buffer, buffer_seek_start, 1);
     var identifier = buffer_read(connection_buffer, buffer_u8);
-    show_debug_message(identifier);
+    show_debug_message("client received: " + string(identifier));
     
     if (identifier == NETWORK.MAP_INFO) {
         
@@ -101,17 +101,14 @@ if (event_id == client_socket && event_id != 1) {
             
             var cutter = instance_create_layer(other_player_x, other_player_y, "Instances", obj_PizzaCutterToHold);
             cutter.my_player = other_player;
-            other_player.cutter = cutter;
+            other_player.wep_held = cutter;
             
         }
         
     } else if (identifier == NETWORK.ATTACK) {
         
-        // TODO: fix random crashes after attacking
-        
-        with (other_player.cutter) {
+        with (other_player.wep_held) {
             image_index++;
-            swung = true;
             alarm[0] = 30;
         }
         
@@ -120,6 +117,17 @@ if (event_id == client_socket && event_id != 1) {
         
         if (!is_undefined(target_player) && target_player.player_hp > 0) {
             target_player.player_hp -= 15;
+            
+            if (target_player.player_hp <= 0) {
+                obj_Player.wep_held.target = noone;
+            }
+        }
+        
+    } else if (identifier == NETWORK.DEATH) {
+        
+        if (other_player.wep_held != noone) {
+            instance_destroy(other_player.wep_held);
+            other_player.wep_held = noone;
         }
         
     }

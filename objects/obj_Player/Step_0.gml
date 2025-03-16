@@ -1,6 +1,6 @@
 // If health less than 0, destroy
 if player_hp <= 0 {
-	scr_PlayerDeath(true);
+	scr_PlayerDeath(self);
 }
 
 // Handles checking if the player has picked up a speed boost
@@ -90,7 +90,7 @@ if global.C != noone and array_length(global.C.RoomList) > 0 {
 }
 
 // attacking with pizza cutter
-if (wep_held != noone && keyboard_check_pressed(vk_space) && !wep_held.swung) {
+if (wep_held != noone && keyboard_check_pressed(vk_space) && !obj_Player.wep_held.damaged) {
     with (wep_held) {
         image_index++;
         swung = true;
