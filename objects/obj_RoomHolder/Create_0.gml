@@ -33,3 +33,7 @@ is_bm_east_check = true;
 if self.associated_room != Player1Base and self.associated_room != Player2Base and self.associated_room != CaRoomHeart and self.associated_room != CbRoomHeart and !instance_exists(obj_KillYou) {
 	instance_create_layer(400, 400, "Instances", obj_Spawner);
 }
+
+
+// networking
+has_decoy = false;

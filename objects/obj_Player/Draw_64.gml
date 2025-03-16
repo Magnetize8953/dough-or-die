@@ -6,9 +6,9 @@ draw_healthbar(20, 20, 220, 40, player_hp, c_black, c_red, c_lime, 0, true, 1);
 draw_set_color(c_white);
 draw_text(35, 55, "HP: " + string(player_hp));
 
-if (item_timer > 0) {
-	if (item_name == "Hydra viridissima" and !can_spawn) {
-		item_timer = 0;
+if (item_notif_timer > 0) {
+	if (item_name == "Hydra viridissima" and !can_spawn_decoy) {
+		item_notif_timer = 0;
 	}
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);

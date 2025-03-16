@@ -31,7 +31,7 @@ if (!instance_exists(obj_Player)) {
     return;
 }
 
-// send host information to everyone
+// send host location to everyone
 // only send location if it has changed
 if (obj_Player.x != host_x || obj_Player.y != host_y) {
     for (var j = 0; j < ds_list_size(sockets); j++) {
@@ -46,6 +46,89 @@ if (obj_Player.x != host_x || obj_Player.y != host_y) {
         buffer_write(buffer, buffer_u32, obj_Player.current_room);
         buffer_write(buffer, buffer_s16, obj_Player.x);
         buffer_write(buffer, buffer_s16, obj_Player.y);
+        
+        network_send_packet(socket, buffer, buffer_tell(buffer));
+    }
+}
+
+if (obj_Player.is_invis != host_invis) {
+    
+    host_invis = obj_Player.is_invis;
+    
+    for (var j = 0; j < ds_list_size(sockets); j++) {
+        var socket = ds_list_find_value(sockets, j);
+        
+        buffer_seek(buffer, buffer_seek_start, 1);
+        buffer_write(buffer, buffer_u8, NETWORK.ITEM);
+        buffer_write(buffer, buffer_u16, obj_Player.id);
+        buffer_write(buffer, buffer_u32, 0);
+        buffer_write(buffer, buffer_s16, 0);
+        buffer_write(buffer, buffer_s16, 0);
+        buffer_write(buffer, buffer_u8, PICKUPS.TAFT);
+        if (host_invis) {
+            buffer_write(buffer, buffer_bool, true);
+        } else {
+            buffer_write(buffer, buffer_bool, false);
+        }
+        
+        network_send_packet(socket, buffer, buffer_tell(buffer));
+    }
+}
+
+if (obj_Player.can_spawn_decoy != host_can_spawn_decoy) {
+    
+    host_can_spawn_decoy = obj_Player.can_spawn_decoy;
+    
+    if (!host_can_spawn_decoy && keyboard_check_pressed(ord("C"))) {
+        
+        for (var j = 0; j < ds_list_size(sockets); j++) {
+            var socket = ds_list_find_value(sockets, j);
+            
+            buffer_seek(buffer, buffer_seek_start, 1);
+            buffer_write(buffer, buffer_u8, NETWORK.ITEM);
+            buffer_write(buffer, buffer_u16, obj_Player.id);
+            buffer_write(buffer, buffer_u32, obj_Player.current_room);
+            buffer_write(buffer, buffer_s16, obj_Player.x);
+            buffer_write(buffer, buffer_s16, obj_Player.y);
+            buffer_write(buffer, buffer_u8, PICKUPS.DECOY);
+            
+            network_send_packet(socket, buffer, buffer_tell(buffer));
+        }
+        
+    }
+}
+
+if (obj_Player.wep_held != noone && !host_has_cutter) {
+    
+    host_has_cutter = true;
+    
+    for (var j = 0; j < ds_list_size(sockets); j++) {
+        var socket = ds_list_find_value(sockets, j);
+        
+        buffer_seek(buffer, buffer_seek_start, 1);
+        buffer_write(buffer, buffer_u8, NETWORK.ITEM);
+        buffer_write(buffer, buffer_u16, obj_Player.id);
+        buffer_write(buffer, buffer_u32, obj_Player.current_room);
+        buffer_write(buffer, buffer_s16, obj_Player.x);
+        buffer_write(buffer, buffer_s16, obj_Player.y);
+        buffer_write(buffer, buffer_u8, PICKUPS.PIZZA_CUTTER);
+        
+        network_send_packet(socket, buffer, buffer_tell(buffer));
+    }
+}
+
+// TODO: fix random crashes after attacking
+if (host_has_cutter && keyboard_check_pressed(vk_space) && obj_Player.wep_held.swung) {
+    for (var j = 0; j < ds_list_size(sockets); j++) {
+        var socket = ds_list_find_value(sockets, j);
+        
+        buffer_seek(buffer, buffer_seek_start, 1);
+        buffer_write(buffer, buffer_u8, NETWORK.ATTACK);
+        buffer_write(buffer, buffer_u16, obj_Player.id);
+        buffer_write(buffer, buffer_u32, 0);
+        buffer_write(buffer, buffer_s16, 0);
+        buffer_write(buffer, buffer_s16, 0);
+        buffer_write(buffer, buffer_u16, obj_Player.wep_held.target);
         
         network_send_packet(socket, buffer, buffer_tell(buffer));
     }

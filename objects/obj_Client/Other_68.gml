@@ -24,9 +24,18 @@ if (event_id == client_socket && event_id != 1) {
         
     }
     
+    if (identifier == NETWORK.YOU) {
+        
+        id_on_server = buffer_read(connection_buffer, buffer_u16);
+        ds_map_add(elements, id_on_server, obj_Player);
+        
+        return;
+        
+    }
+    
     var other_player_id = buffer_read(connection_buffer, buffer_u16);
     // ignore packets regarding self
-    if (instance_exists(obj_Player) && other_player_id == obj_Player.id) {
+    if (instance_exists(obj_Player) && other_player_id == id_on_server) {
         return;
     }
     
@@ -49,6 +58,9 @@ if (event_id == client_socket && event_id != 1) {
     
     if (identifier == NETWORK.DELETE_ELEMENT) {
         
+        if (other_player.cutter != noone) {
+            instance_destroy(other_player.cutter);
+        }
         instance_destroy(other_player);
         ds_map_delete(elements, other_player);
         
@@ -64,6 +76,50 @@ if (event_id == client_socket && event_id != 1) {
             other_player.visible = 1;
             other_player.x = other_player_x;
             other_player.y = other_player_y;
+        }
+        
+    } else if (identifier == NETWORK.ITEM) {
+        
+        var item = buffer_read(connection_buffer, buffer_u8);
+        
+        if (item == PICKUPS.TAFT) {
+            
+            if (buffer_read(connection_buffer, buffer_bool)) {
+                other_player.image_alpha = 0.2;
+                other_player.is_invis = true;
+            } else {
+                other_player.image_alpha = 1;
+                other_player.is_invis = false;
+            }
+            
+        } else if (item == PICKUPS.DECOY) {
+            
+            // TODO: Handle this better
+            ds_list_add(decoy_rooms, other_player_room);
+            
+        } else if (item == PICKUPS.PIZZA_CUTTER) {
+            
+            var cutter = instance_create_layer(other_player_x, other_player_y, "Instances", obj_PizzaCutterToHold);
+            cutter.my_player = other_player;
+            other_player.cutter = cutter;
+            
+        }
+        
+    } else if (identifier == NETWORK.ATTACK) {
+        
+        // TODO: fix random crashes after attacking
+        
+        with (other_player.cutter) {
+            image_index++;
+            swung = true;
+            alarm[0] = 30;
+        }
+        
+        var target_player_id = buffer_read(connection_buffer, buffer_u16);
+        var target_player = ds_map_find_value(elements, target_player_id);
+        
+        if (!is_undefined(target_player) && target_player.player_hp > 0) {
+            target_player.player_hp -= 15;
         }
         
     }

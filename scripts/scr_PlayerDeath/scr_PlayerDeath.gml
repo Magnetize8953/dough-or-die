@@ -1,16 +1,18 @@
-function scr_PlayerDeath(){
+function scr_PlayerDeath(player){
     
     // reset variables
-    obj_Player.health = 100;
+    obj_Player.player_hp = 100;
     obj_Player.falling = false;
     obj_Player.speed_timer = 0;
     obj_Player.item_timer = 0;
     obj_Player.invis_timer = 0;
     obj_Player.image_xscale = 1;
     obj_Player.image_yscale = 1;
+    obj_Player.x = 500;
+    obj_Player.y = 500;
     
     // remove items
-    if obj_Player.wep_held != noone {
+    if (player && obj_Player.wep_held != noone) {
         instance_destroy(obj_Player.wep_held);
     }
     

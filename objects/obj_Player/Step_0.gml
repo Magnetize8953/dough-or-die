@@ -1,12 +1,12 @@
 // If health less than 0, destroy
-if self.health <= 0 {
-	scr_PlayerDeath();
+if player_hp <= 0 {
+	scr_PlayerDeath(true);
 }
 
 // Handles checking if the player has picked up a speed boost
 if (speed_timer > 0) {
     speed_timer -= 1;
-	item_timer -= 1;
+	item_notif_timer -= 1;
 } else {
     move_speed = 12;
 	if (self.is_invis) {
@@ -17,7 +17,7 @@ if (speed_timer > 0) {
 // Handles the player going invisible and invincible
 if (invis_timer > 0) {
 	invis_timer -= 1;
-	item_timer -= 1;
+	item_notif_timer -= 1;
 } else {
 	self.is_invis = false;
 	image_alpha = 1;
@@ -28,8 +28,8 @@ if (invis_timer > 0) {
 }
 
 // Handles if player spawns decoy
-if can_spawn and keyboard_check_pressed(ord("C")) {
-	can_spawn = false;
+if (can_spawn_decoy and keyboard_check_pressed(ord("C"))) {
+	can_spawn_decoy = false;
 	instance_create_layer(x, y, "Instances", obj_PepDecoy);
 }
 
@@ -87,6 +87,15 @@ if global.C != noone and array_length(global.C.RoomList) > 0 {
 			buttons_pressed[2] = false;
 		}
 	}
+}
+
+// attacking with pizza cutter
+if (wep_held != noone && keyboard_check_pressed(vk_space) && !wep_held.swung) {
+    with (wep_held) {
+        image_index++;
+        swung = true;
+        alarm[0] = 20;
+    }
 }
 
 // networking

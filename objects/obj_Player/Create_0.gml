@@ -1,9 +1,9 @@
 persistent = true;
-self.health = 100;
+player_hp = 100;
 falling = false;
 speed_timer = 0;
-item_timer = 0;
 invis_timer = 0;
+item_notif_timer = 0;
 
 // easter egg
 buttons_pressed[0] = false;

@@ -6,9 +6,18 @@
 // packet identifiers
 enum NETWORK {
     MAP_INFO,
+    YOU,
     ADD_ELEMENT,
     DELETE_ELEMENT,
     MOVEMENT,
+    ITEM,
+    ATTACK,
+}
+
+enum PICKUPS {
+    TAFT,
+    DECOY,
+    PIZZA_CUTTER,
 }
 
 show_debug_message("networking initialised");

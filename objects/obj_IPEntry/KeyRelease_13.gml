@@ -1,3 +1,7 @@
+if (ip == "l") {
+    ip = "127.0.0.1";
+}
+
 var sock = network_create_socket(network_socket_tcp);
 var port_num = 50000;
 

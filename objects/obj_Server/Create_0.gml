@@ -18,5 +18,11 @@ server = network_create_server(network_socket_tcp, port, max_clients);
 // 16KB buffer because...
 buffer = buffer_create(16384, buffer_grow, 1);
 
+// TODO: Handle better
+decoy_rooms = ds_list_create();
+
 host_x = 0;
 host_y = 0;
+host_invis = false;
+host_can_spawn_decoy = false;
+host_has_cutter = false;
