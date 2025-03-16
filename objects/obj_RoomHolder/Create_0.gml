@@ -24,13 +24,13 @@ if self.south_connect != noone {
 if self.west_connect != noone {
 	instance_create_layer(10 + obj_Go2Room.sprite_xoffset, 1080 / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.west_connect, result : self.west_result});
 	original_wc = self.west_connect;
-} else {
+} else if self.associated_room != Player2Base {
 	instance_create_layer(0, 1080 / 2 - 60, "Instances", obj_Barrier);
-}
+} 
 if self.east_connect != noone {
 	instance_create_layer(1910 - obj_Go2Room.sprite_xoffset, 1080 / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.east_connect, result : self.east_result});
 	original_ec = self.east_connect;
-} else {
+} else if self.associated_room != Player1Base {
 	instance_create_layer(1920 - 120, 1080 / 2 - 60, "Instances", obj_Barrier);
 }
 

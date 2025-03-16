@@ -17,7 +17,10 @@
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_Wall1",
+    "path":"sprites/spr_Wall1/spr_Wall1.yy",
+  },
   "spriteNoExport":false,
   "textureGroupId":{
     "name":"Default",

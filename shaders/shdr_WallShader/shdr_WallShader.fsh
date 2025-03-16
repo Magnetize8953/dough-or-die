@@ -10,7 +10,7 @@ void main()
 {
     // overlay colours
     if (u_rgb[0] == 0.0 && u_rgb[1] == 0.0 && u_rgb[2] == 0.0) { // no shading
-        gl_FragColor = v_vColour; // return default texture
+        gl_FragColor = texColour; // return default texture
     } else { // overlay colour was given
 		vec4 texColour = texture2D(gm_BaseTexture, v_vTexcoord);
 		//gl_FragColor = mix(texColour, vec4(1.0, 0.0, 0.0, texColour.a), 0.5); // Tint red

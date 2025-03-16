@@ -289,6 +289,7 @@
     {"id":{"name":"spr_ShrineMessage","path":"sprites/spr_ShrineMessage/spr_ShrineMessage.yy",},},
     {"id":{"name":"spr_SundaeShrine","path":"sprites/spr_SundaeShrine/spr_SundaeShrine.yy",},},
     {"id":{"name":"spr_Taft","path":"sprites/spr_Taft/spr_Taft.yy",},},
+    {"id":{"name":"spr_Wall1","path":"sprites/spr_Wall1/spr_Wall1.yy",},},
     {"id":{"name":"spr_YouExited","path":"sprites/spr_YouExited/spr_YouExited.yy",},},
     {"id":{"name":"ts_Greyscale","path":"tilesets/ts_Greyscale/ts_Greyscale.yy",},},
     {"id":{"name":"ts_Wall1","path":"tilesets/ts_Wall1/ts_Wall1.yy",},},
