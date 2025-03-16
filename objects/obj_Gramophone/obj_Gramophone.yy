@@ -13,7 +13,10 @@
     "name":"RoomStuffs",
     "path":"folders/Objects/RoomStuffs.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_Barrier",
+    "path":"objects/obj_Barrier/obj_Barrier.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -12,18 +12,26 @@ show_debug_message("Map?: " + string(ds_map_find_value(global.room_object_map, r
 if self.north_connect != noone {
 	instance_create_layer(1920 / 2, 10 + obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.north_connect, result : self.north_result});
 	original_nc = self.north_connect; // used to check for updates
+} else { // Places a barrier if there is no door there
+	instance_create_layer(1920 / 2 - 60, 0, "Instances", obj_Barrier);
 }
 if self.south_connect != noone {
 	instance_create_layer(1920 / 2, 1070 - obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.south_connect, result : self.south_result});
 	original_sc = self.south_connect;
+} else { 
+	instance_create_layer(1920 / 2 - 60, 1080 - 120, "Instances", obj_Barrier);
 }
 if self.west_connect != noone {
 	instance_create_layer(10 + obj_Go2Room.sprite_xoffset, 1080 / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.west_connect, result : self.west_result});
 	original_wc = self.west_connect;
+} else {
+	instance_create_layer(0, 1080 / 2 - 60, "Instances", obj_Barrier);
 }
 if self.east_connect != noone {
 	instance_create_layer(1910 - obj_Go2Room.sprite_xoffset, 1080 / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.east_connect, result : self.east_result});
 	original_ec = self.east_connect;
+} else {
+	instance_create_layer(1920 - 120, 1080 / 2 - 60, "Instances", obj_Barrier);
 }
 
 myself = ds_map_find_value(global.room_object_map, room_get_name(self.associated_room));
@@ -33,3 +41,9 @@ is_bm_east_check = true;
 if self.associated_room != Player1Base and self.associated_room != Player2Base and self.associated_room != CaRoomHeart and self.associated_room != CbRoomHeart and !instance_exists(obj_KillYou) {
 	instance_create_layer(400, 400, "Instances", obj_Spawner);
 }
+
+
+// set up shader
+layer_shader("Tiles_1", shdr_WallShader);
+_uniColours = shader_get_uniform(shdr_WallShader, "u_rgb"); // setting up variable in shader
+_colours = [ red, green, blue ]; // rgb are instance variables
