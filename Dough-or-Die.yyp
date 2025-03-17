@@ -277,6 +277,7 @@
     {"id":{"name":"spr_BigRedButton","path":"sprites/spr_BigRedButton/spr_BigRedButton.yy",},},
     {"id":{"name":"spr_BlueWall","path":"sprites/spr_BlueWall/spr_BlueWall.yy",},},
     {"id":{"name":"spr_DecoyPepPizza","path":"sprites/spr_DecoyPepPizza/spr_DecoyPepPizza.yy",},},
+    {"id":{"name":"spr_Door","path":"sprites/spr_Door/spr_Door.yy",},},
     {"id":{"name":"spr_Gramophone","path":"sprites/spr_Gramophone/spr_Gramophone.yy",},},
     {"id":{"name":"spr_greyscaleWalls","path":"sprites/spr_greyscaleWalls/spr_greyscaleWalls.yy",},},
     {"id":{"name":"spr_Hydra","path":"sprites/spr_Hydra/spr_Hydra.yy",},},
