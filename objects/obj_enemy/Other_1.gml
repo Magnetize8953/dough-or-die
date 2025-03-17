@@ -1,0 +1,1 @@
+path_start(enemy, hsp, path_action_restart, true);
