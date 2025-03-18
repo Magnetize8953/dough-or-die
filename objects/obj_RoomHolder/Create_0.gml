@@ -15,28 +15,28 @@ door = irandom_range(0, 5);
 
 
 if self.north_connect != noone {
-	instance_create_layer(1920 / 2, 10 + obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.north_connect, result : self.north_result, sprite_num : door, image_angle : 0});
+	instance_create_layer(room_width / 2, 10 + obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.north_connect, result : self.north_result, sprite_num : door, image_angle : 0});
 	original_nc = self.north_connect; // used to check for updates
 } else { // Places a barrier if there is no door there
-	instance_create_layer(1920 / 2 - 60, 0, "Instances", obj_Barrier);
+	instance_create_layer(room_width / 2 - 60, 0, "Instances", obj_Barrier);
 }
 if self.south_connect != noone {
-	instance_create_layer(1920 / 2, 1070 - obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.south_connect, result : self.south_result, sprite_num : door, image_angle : 180});
+	instance_create_layer(room_width / 2, room_height - 10 - obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.south_connect, result : self.south_result, sprite_num : door, image_angle : 180});
 	original_sc = self.south_connect;
 } else { 
-	instance_create_layer(1920 / 2 - 60, 1080 - 120, "Instances", obj_Barrier);
+	instance_create_layer(room_width / 2 - 60, room_height - 120, "Instances", obj_Barrier);
 }
 if self.west_connect != noone {
-	instance_create_layer(10 + obj_Go2Room.sprite_xoffset, 1080 / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.west_connect, result : self.west_result, sprite_num : door, image_angle : 90});
+	instance_create_layer(10 + obj_Go2Room.sprite_xoffset, room_height / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.west_connect, result : self.west_result, sprite_num : door, image_angle : 90});
 	original_wc = self.west_connect;
 } else if self.associated_room != Player2Base {
-	instance_create_layer(0, 1080 / 2 - 60, "Instances", obj_Barrier);
+	instance_create_layer(0, room_height / 2 - 60, "Instances", obj_Barrier);
 } 
 if self.east_connect != noone {
-	instance_create_layer(1910 - obj_Go2Room.sprite_xoffset, 1080 / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.east_connect, result : self.east_result, sprite_num : door, image_angle : 270});
+	instance_create_layer(room_width - 10 - obj_Go2Room.sprite_xoffset, room_height / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.east_connect, result : self.east_result, sprite_num : door, image_angle : 270});
 	original_ec = self.east_connect;
 } else if self.associated_room != Player1Base {
-	instance_create_layer(1920 - 120, 1080 / 2 - 60, "Instances", obj_Barrier);
+	instance_create_layer(room_width - 120, room_height / 2 - 60, "Instances", obj_Barrier);
 }
 
 myself = ds_map_find_value(global.room_object_map, room_get_name(self.associated_room));

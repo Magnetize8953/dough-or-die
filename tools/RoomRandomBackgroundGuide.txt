@@ -2,6 +2,8 @@ Code produced via the following:
 https://chatgpt.com/share/67d7221b-4f1c-8013-805f-6458b333c6e7
 https://chatgpt.com/canvas/shared/67d72205f7d481918bb81806ff19143e
 
+33 in Ca is the first instance of repetition
+
 BLa: [53, 42, 50, 55, 13]
 BLb: [17, 33, 38, 31]
 BMa: [41, 39, 12, 45, 6]
@@ -11,7 +13,7 @@ BRb: [40, 46, 44, 37, 52, 51]
 Ca: [32, 54, 47, 21, 26, 56, 16, 34, 11, 48, 36, 33, 40, 50, 56, 46]
 Cb: [55, 55, 39, 47, 52, 41, 44, 48]
 MLa: [23, 21, 12, 43, 31]
-MLb: [55, 50, 11, 55]
+MLb: [55, 50, 11, 13]
 MRa: [11, 39, 48, 53, 44, 51]
 MRb: [35, 21, 53, 52, 51]
 TLa: [6, 29, 56, 30]

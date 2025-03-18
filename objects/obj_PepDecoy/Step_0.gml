@@ -5,8 +5,8 @@ if self.health <= 0 {
 if !on_path {
 	dist_list[0] = y - 220;  // distance to north edge of path
 	dist_list[1] = x - 220;  // distance to west
-	dist_list[2] = 1700 - x; // distance to east
-	dist_list[3] = 860 - y;  // distance to south
+	dist_list[2] = room_width - 220 - x; // distance to east
+	dist_list[3] = room_height - 220 - y;  // distance to south
     
 	// https://manual.gamemaker.io/lts/en/GameMaker_Language/GML_Reference/Variable_Functions/array_sort.htm
 	// sorts the array to have the lowest value first
@@ -26,17 +26,17 @@ if !on_path {
 			on_path = true;
 			direct = "north";
 		}
-	} else if dist_list[2] == 1700 - x { // ... to east
+	} else if dist_list[2] == room_width - 220 - x { // ... to east
 		x += 10;
-		if x >= 1700 {
-			x = 1700;
+		if x >= room_width - 220 {
+			x = room_width - 220;
 			on_path = true;
 			direct = "south";
 		}
 	} else { // ... to south 
 		y += 10;
-		if y >= 860 {
-			y = 860;
+		if y >= room_height - 220 {
+			y = room_height - 220;
 			on_path = true;
 			direct = "west";
 		}
@@ -44,11 +44,11 @@ if !on_path {
 } else { // If it is on path
 	if direct == "east" { // travel east along north side
 		x += 10;
-		if x >= 1700 { direct = "south"} // switch to south
+		if x >= room_width - 220 { direct = "south"} // switch to south
 		
 	} if direct == "south" { // travel south along east side
 		y += 10;
-		if y >= 860 { direct = "west" } // switch to west
+		if y >= room_height - 220 { direct = "west" } // switch to west
 		
 	}  if direct == "west" { // travel west along south side
 		x -= 10;
