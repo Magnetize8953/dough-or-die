@@ -13,6 +13,7 @@ enum NETWORK {
     ITEM,
     ATTACK,
     DEATH,
+    YOU_LOST,
 }
 
 enum PICKUPS {

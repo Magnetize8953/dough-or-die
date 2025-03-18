@@ -130,6 +130,11 @@ if (event_id == client_socket && event_id != 1) {
             other_player.wep_held = noone;
         }
         
+    } else if (identifier == NETWORK.YOU_LOST) {
+        
+        global.game_state == "You lost!";
+        room_goto(EndStateRoom);
+        
     }
     
 }

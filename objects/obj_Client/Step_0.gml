@@ -119,3 +119,15 @@ if (client_has_cutter && keyboard_check_pressed(vk_space) && obj_Player.wep_held
     network_send_packet(client_socket, buffer, buffer_tell(buffer));
     
 }
+
+// win state for client player
+if (obj_Player.current_room == Player1Base) {
+    buffer_seek(buffer, buffer_seek_start, 1);
+    buffer_write(buffer, buffer_u8, NETWORK.YOU_LOST);
+    buffer_write(buffer, buffer_u16, id_on_server);
+    buffer_write(buffer, buffer_u32, 0);
+    buffer_write(buffer, buffer_s16, 0);
+    buffer_write(buffer, buffer_s16, 0);
+    
+    network_send_packet(client_socket, buffer, buffer_tell(buffer));
+}

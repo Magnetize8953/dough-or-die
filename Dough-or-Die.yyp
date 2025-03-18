@@ -62,6 +62,7 @@
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"chaytonman-1391360_No-Time.mp3","CopyToMask":-1,"filePath":"datafiles","name":"chaytonman-1391360_No-Time.mp3","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"dough-or-die-cave_upscayl-fixed-offset.png","CopyToMask":-1,"filePath":"datafiles","name":"dough-or-die-cave_upscayl-fixed-offset.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"freesound_community-pixabay-sword-swipes-7174-modified.mp3","CopyToMask":-1,"filePath":"datafiles","name":"freesound_community-pixabay-sword-swipes-7174-modified.mp3","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"kenney-impact-impactWood_heavy_001.ogg","CopyToMask":-1,"filePath":"datafiles","name":"kenney-impact-impactWood_heavy_001.ogg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"kenney-interface-select_008.ogg","CopyToMask":-1,"filePath":"datafiles","name":"kenney-interface-select_008.ogg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -94,6 +95,7 @@
     {"id":{"name":"obj_Chunk","path":"objects/obj_Chunk/obj_Chunk.yy",},},
     {"id":{"name":"obj_Client","path":"objects/obj_Client/obj_Client.yy",},},
     {"id":{"name":"obj_Credits","path":"objects/obj_Credits/obj_Credits.yy",},},
+    {"id":{"name":"obj_EndState","path":"objects/obj_EndState/obj_EndState.yy",},},
     {"id":{"name":"obj_FloorPentagram","path":"objects/obj_FloorPentagram/obj_FloorPentagram.yy",},},
     {"id":{"name":"obj_Game","path":"objects/obj_Game/obj_Game.yy",},},
     {"id":{"name":"obj_Go2Room","path":"objects/obj_Go2Room/obj_Go2Room.yy",},},
@@ -185,6 +187,7 @@
     {"id":{"name":"CbRoom8","path":"rooms/CbRoom8/CbRoom8.yy",},},
     {"id":{"name":"CbRoomHeart","path":"rooms/CbRoomHeart/CbRoomHeart.yy",},},
     {"id":{"name":"CreditsMenu","path":"rooms/CreditsMenu/CreditsMenu.yy",},},
+    {"id":{"name":"EndStateRoom","path":"rooms/EndStateRoom/EndStateRoom.yy",},},
     {"id":{"name":"ExitChunk","path":"rooms/ExitChunk/ExitChunk.yy",},},
     {"id":{"name":"InheritRoom","path":"rooms/InheritRoom/InheritRoom.yy",},},
     {"id":{"name":"LearnMenu","path":"rooms/LearnMenu/LearnMenu.yy",},},
@@ -466,6 +469,7 @@
     {"roomId":{"name":"CbRoom8","path":"rooms/CbRoom8/CbRoom8.yy",},},
     {"roomId":{"name":"CbRoomHeart","path":"rooms/CbRoomHeart/CbRoomHeart.yy",},},
     {"roomId":{"name":"PlayMenu","path":"rooms/PlayMenu/PlayMenu.yy",},},
+    {"roomId":{"name":"EndStateRoom","path":"rooms/EndStateRoom/EndStateRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

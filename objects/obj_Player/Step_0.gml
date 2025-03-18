@@ -99,5 +99,11 @@ if (wep_held != noone && keyboard_check_pressed(vk_space) && !obj_Player.wep_hel
     }
 }
 
+// win state
+if (room == target_room) {
+    global.game_state = "You win!";
+    room_goto(EndStateRoom);
+}
+
 // networking
 current_room = room;

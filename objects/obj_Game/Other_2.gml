@@ -42,3 +42,6 @@ global.map_generated = false;
 
 // play background music when the game starts in the menu
 global.background_music = audio_play_sound(snd_MenuMusic, 1, true);
+
+// winner-loser
+global.game_state = "unknown";

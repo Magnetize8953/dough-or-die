@@ -153,3 +153,22 @@ if (host_has_cutter && keyboard_check_pressed(vk_space) && obj_Player.wep_held.d
         network_send_packet(socket, buffer, buffer_tell(buffer));
     }
 }
+
+
+// win state for host
+if (obj_Player.current_room == Player2Base) {
+    show_debug_message("player one wins");
+    
+    for (var j = 0; j < ds_list_size(sockets); j++) {
+        var socket = ds_list_find_value(sockets, j);
+        
+        buffer_seek(buffer, buffer_seek_start, 1);
+        buffer_write(buffer, buffer_u8, NETWORK.YOU_LOST);
+        buffer_write(buffer, buffer_u16, obj_Player.id);
+        buffer_write(buffer, buffer_u32, 0);
+        buffer_write(buffer, buffer_s16, 0);
+        buffer_write(buffer, buffer_s16, 0);
+        
+        network_send_packet(socket, buffer, buffer_tell(buffer));
+    }
+}
