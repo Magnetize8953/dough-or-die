@@ -12,6 +12,11 @@ draw_text_color(room_center, y + ((font_get_size(fnt_main) + 50) * 4 - pos), "De
 draw_text_color(room_center, y + ((font_get_size(fnt_main) + 50) * 5 - pos), "Ukiah", c_white, c_white, c_white, c_white, 1);
 draw_text_color(room_center, y + ((font_get_size(fnt_main) + 50) * 6 - pos), "ChatGPT", c_white, c_white, c_white, c_white, 1);
 
-// other
+// music
+draw_text_color(room_center, y + ((font_get_size(fnt_main) + 50) * 8 - pos), "Audio", c_white, c_white, c_white, c_white, 1);
+draw_text_color(room_center, y + ((font_get_size(fnt_main) + 50) * 9 - pos), "Kevin MacLeod, Pinball Spring", c_white, c_white, c_white, c_white, 1);
+draw_text_color(room_center, y + ((font_get_size(fnt_main) + 50) * 10 - pos), "Chaytonman, No Time", c_white, c_white, c_white, c_white, 1);
+draw_text_color(room_center, y + ((font_get_size(fnt_main) + 50) * 11 - pos), "Kenney, General Sound Effects", c_white, c_white, c_white, c_white, 1);
+
 /* to be added */
-draw_text_color(room_center, y + ((font_get_size(fnt_main) + 50) * 10 - pos), "And more...", c_white, c_white, c_white, c_white, 1);
+draw_text_color(room_center, y + ((font_get_size(fnt_main) + 50) * 14 - pos), "And more...", c_white, c_white, c_white, c_white, 1);
