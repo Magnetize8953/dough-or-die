@@ -9,6 +9,10 @@ if !is_loaded and instance_exists(obj_Player) {
 	var emitter = audio_emitter_create();
 	audio_falloff_set_model(audio_falloff_inverse_distance_scaled);
 	audio_emitter_falloff(emitter, 100, 1825, 1);
+    
+    // pause background music
+    audio_sound_gain(global.background_music, 0, pausing_speed);
+    alarm[0] = pausing_speed;
 
 	// play sound
 	music = audio_play_sound_on(emitter, snd_OperaTrack, true, 10);
