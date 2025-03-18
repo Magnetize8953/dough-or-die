@@ -83,6 +83,7 @@
     {"id":{"name":"obj_MLChunk","path":"objects/obj_MLChunk/obj_MLChunk.yy",},},
     {"id":{"name":"obj_MRChunk","path":"objects/obj_MRChunk/obj_MRChunk.yy",},},
     {"id":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},},
+    {"id":{"name":"obj_OtherPlayer","path":"objects/obj_OtherPlayer/obj_OtherPlayer.yy",},},
     {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},
     {"id":{"name":"obj_RoomHolder","path":"objects/obj_RoomHolder/obj_RoomHolder.yy",},},
     {"id":{"name":"obj_ShrineMessage","path":"objects/obj_ShrineMessage/obj_ShrineMessage.yy",},},
