@@ -18,3 +18,6 @@ if (room_exists(room_holder)) {
 	room_goto(room_holder);
 	alarm[1] = 10;
 }
+
+// decrease volume of menu music to nothing over the course of five seconds
+audio_sound_gain(global.background_music, 0, 5000)

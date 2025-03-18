@@ -39,3 +39,6 @@ global.br_north = noone;
 global.br_west = noone;
 global.cheat_code_room_name = false;
 global.map_generated = false;
+
+// play background music when the game starts in the menu
+global.background_music = audio_play_sound(snd_MenuMusic, 1, true);
