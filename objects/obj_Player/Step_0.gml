@@ -91,6 +91,7 @@ if global.C != noone and array_length(global.C.RoomList) > 0 {
 
 // attacking with pizza cutter
 if (wep_held != noone && keyboard_check_pressed(vk_space) && !obj_Player.wep_held.damaged) {
+    audio_play_sound(snd_CutterSwing, 1, false);
     with (wep_held) {
         image_index++;
         swung = true;

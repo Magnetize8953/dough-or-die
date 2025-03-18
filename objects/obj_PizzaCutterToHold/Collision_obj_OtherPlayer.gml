@@ -1,7 +1,8 @@
 target = other;
 
 if (other != my_player && !other.is_invis && !damaged && swung && other.visible == 1) {
-    show_debug_message("damage dealt")
+    show_debug_message("damage dealt");
+    audio_play_sound(snd_Hit, 1, false);
     damaged = true;
 }
 

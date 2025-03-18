@@ -62,6 +62,8 @@
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"chaytonman-1391360_No-Time.mp3","CopyToMask":-1,"filePath":"datafiles","name":"chaytonman-1391360_No-Time.mp3","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"freesound_community-pixabay-sword-swipes-7174-modified.mp3","CopyToMask":-1,"filePath":"datafiles","name":"freesound_community-pixabay-sword-swipes-7174-modified.mp3","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"kenney-impact-impactWood_heavy_001.ogg","CopyToMask":-1,"filePath":"datafiles","name":"kenney-impact-impactWood_heavy_001.ogg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"kenney-interface-select_008.ogg","CopyToMask":-1,"filePath":"datafiles","name":"kenney-interface-select_008.ogg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"kenney-rpg-cloth4.ogg","CopyToMask":-1,"filePath":"datafiles","name":"kenney-rpg-cloth4.ogg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"kevin-macleod-pinball-spring.mp3","CopyToMask":-1,"filePath":"datafiles","name":"kevin-macleod-pinball-spring.mp3","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -246,7 +248,9 @@
     {"id":{"name":"shdr_buttonHighlight","path":"shaders/shdr_buttonHighlight/shdr_buttonHighlight.yy",},},
     {"id":{"name":"snd_ButtonHover","path":"sounds/snd_ButtonHover/snd_ButtonHover.yy",},},
     {"id":{"name":"snd_ButtonPressed","path":"sounds/snd_ButtonPressed/snd_ButtonPressed.yy",},},
+    {"id":{"name":"snd_CutterSwing","path":"sounds/snd_CutterSwing/snd_CutterSwing.yy",},},
     {"id":{"name":"snd_GameplayMusic","path":"sounds/snd_GameplayMusic/snd_GameplayMusic.yy",},},
+    {"id":{"name":"snd_Hit","path":"sounds/snd_Hit/snd_Hit.yy",},},
     {"id":{"name":"snd_MenuMusic","path":"sounds/snd_MenuMusic/snd_MenuMusic.yy",},},
     {"id":{"name":"snd_OperaTrack","path":"sounds/snd_OperaTrack/snd_OperaTrack.yy",},},
     {"id":{"name":"snd_ShrineChime","path":"sounds/snd_ShrineChime/snd_ShrineChime.yy",},},
