@@ -1,3 +1,5 @@
+event_inherited();
+
 if (other.object_index == obj_Player) {
     other.move_speed *= 2.5;
     other.item_name = "Two-and-a-Half of Spades";
