@@ -61,6 +61,8 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"kenney-interface-select_008.ogg","CopyToMask":-1,"filePath":"datafiles","name":"kenney-interface-select_008.ogg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"kenney-rpg-cloth4.ogg","CopyToMask":-1,"filePath":"datafiles","name":"kenney-rpg-cloth4.ogg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"main_menu.png","CopyToMask":-1,"filePath":"datafiles","name":"main_menu.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Quattrocento-Regular.ttf","CopyToMask":-1,"filePath":"datafiles","name":"Quattrocento-Regular.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"spr_button.png","CopyToMask":-1,"filePath":"datafiles","name":"spr_button.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -240,6 +242,8 @@
     {"id":{"name":"TRbRoom5","path":"rooms/TRbRoom5/TRbRoom5.yy",},},
     {"id":{"name":"scr_PlayerDeath","path":"scripts/scr_PlayerDeath/scr_PlayerDeath.yy",},},
     {"id":{"name":"shdr_buttonHighlight","path":"shaders/shdr_buttonHighlight/shdr_buttonHighlight.yy",},},
+    {"id":{"name":"snd_ButtonHover","path":"sounds/snd_ButtonHover/snd_ButtonHover.yy",},},
+    {"id":{"name":"snd_ButtonPressed","path":"sounds/snd_ButtonPressed/snd_ButtonPressed.yy",},},
     {"id":{"name":"snd_OperaTrack","path":"sounds/snd_OperaTrack/snd_OperaTrack.yy",},},
     {"id":{"name":"snd_ShrineChime","path":"sounds/snd_ShrineChime/snd_ShrineChime.yy",},},
     {"id":{"name":"spr_25OfSpades","path":"sprites/spr_25OfSpades/spr_25OfSpades.yy",},},

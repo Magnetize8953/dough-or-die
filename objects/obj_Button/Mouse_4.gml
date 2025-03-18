@@ -1,4 +1,4 @@
-show_debug_message("*plays click sound*");
+audio_play_sound(snd_ButtonPressed, 1, false);
 
 if (option != noone && string_count("quit", option) > 0) {
     game_end();
