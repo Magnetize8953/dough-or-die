@@ -18,11 +18,11 @@ if (!instance_exists(target)) {
 
 if (map_done) {
     if (a_option) {
-        if (room == global.BM.RoomList[0] || 
-            room == global.BM.RoomList[1] || 
-            room == global.BM.RoomList[2] || 
-            room == global.BM.RoomList[3] || 
-            room == global.BM.RoomList[4]) {
+        if (room == global.TM.RoomList[0] || 
+            room == global.TM.RoomList[1] || 
+            room == global.TM.RoomList[2] || 
+            room == global.TM.RoomList[3] || 
+            room == global.TM.RoomList[4]) {
             
             if (!persistent) {
                 show_debug_message("Setting persistent = true (In MLA room)");
@@ -35,24 +35,25 @@ if (map_done) {
             }
             persistent = false;
 
-            global.enemy1_target_room = BMaRoom1;
-            global.enemy1_respawn_x = x;
-            global.enemy1_respawn_y = y;
-            global.enemy1_should_respawn = true;
+            global.enemy2_target_room = TMaRoom1;
+            global.enemy2_respawn_x = x;
+            global.enemy2_respawn_y = y;
+            global.enemy2_should_respawn = true;
 
-            show_debug_message("Enemy removed, will respawn in " + room_get_name(global.enemy1_target_room));
+            show_debug_message("Enemy removed, will respawn in " + room_get_name(global.enemy2_target_room));
 
             instance_destroy();
         }
     }
 
     if (b_option) {
-        if (room == global.BM.RoomList[0] || 
-            room == global.BM.RoomList[1] || 
-            room == global.BM.RoomList[2] || 
-            room == global.BM.RoomList[3] ||
-			room == global.BM.RoomList[4] ||
-			room == global.BM.RoomList[5]) {
+        if (room == global.TM.RoomList[0] || 
+            room == global.TM.RoomList[1] || 
+            room == global.TM.RoomList[2] || 
+            room == global.TM.RoomList[3] ||
+			room == global.TM.RoomList[4] ||
+			room == global.TM.RoomList[5] ||
+			room == global.TM.RoomList[6]) {
             
             if (!persistent) {
                 show_debug_message("Setting persistent = true (In MLB room)");
@@ -65,12 +66,12 @@ if (map_done) {
             }
             persistent = false;
 
-            global.enemy1_target_room = BMaRoom1;
-            global.enemy1_respawn_x = x;
-            global.enemy1_respawn_y = y;
-            global.enemy1_should_respawn = true;
+            global.enemy2_target_room = TMaRoom1;
+            global.enemy2_respawn_x = x;
+            global.enemy2_respawn_y = y;
+            global.enemy2_should_respawn = true;
 
-            show_debug_message("Enemy removed, will respawn in " + room_get_name(global.enemy1_target_room));
+            show_debug_message("Enemy removed, will respawn in " + room_get_name(global.enemy2_target_room));
 
             instance_destroy();
         }

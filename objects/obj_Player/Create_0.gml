@@ -7,3 +7,8 @@ invis_timer = 0;
 buttons_pressed[0] = false;
 buttons_pressed[1] = false;
 buttons_pressed[2] = false;
+
+
+map_done = false;
+var delay = 60 * 1;
+alarm[1] = delay;

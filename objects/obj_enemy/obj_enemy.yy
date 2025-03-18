@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"enemy_temp",
-    "path":"sprites/enemy_temp/enemy_temp.yy",
+    "name":"spr_lettuceEnemy",
+    "path":"sprites/spr_lettuceEnemy/spr_lettuceEnemy.yy",
   },
   "spriteMaskId":null,
   "visible":true,

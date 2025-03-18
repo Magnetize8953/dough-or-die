@@ -16,6 +16,7 @@
     {"name":"inst_26889703","path":"rooms/TMbRoom1/TMbRoom1.yy",},
     {"name":"inst_1491C359","path":"rooms/TMbRoom1/TMbRoom1.yy",},
     {"name":"inst_37BF9A1D","path":"rooms/TMbRoom1/TMbRoom1.yy",},
+    {"name":"inst_491F0100","path":"rooms/TMbRoom1/TMbRoom1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -41,6 +42,7 @@
         {"$GMRInstance":"v1","%Name":"inst_26889703","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":true,"inheritedItemId":{"name":"inst_26889703","path":"rooms/InheritRoom/InheritRoom.yy",},"inheritItemSettings":true,"isDnd":false,"name":"inst_26889703","objectId":{"name":"obj_Barrier","path":"objects/obj_Barrier/obj_Barrier.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.5,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v1","%Name":"inst_1491C359","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":true,"inheritedItemId":{"name":"inst_1491C359","path":"rooms/InheritRoom/InheritRoom.yy",},"inheritItemSettings":true,"isDnd":false,"name":"inst_1491C359","objectId":{"name":"obj_Barrier","path":"objects/obj_Barrier/obj_Barrier.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.5,"scaleY":1.0,"x":1020.0,"y":960.0,},
         {"$GMRInstance":"v1","%Name":"inst_37BF9A1D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":true,"inheritedItemId":{"name":"inst_37BF9A1D","path":"rooms/InheritRoom/InheritRoom.yy",},"inheritItemSettings":true,"isDnd":false,"name":"inst_37BF9A1D","objectId":{"name":"obj_Barrier","path":"objects/obj_Barrier/obj_Barrier.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.5,"scaleY":1.0,"x":0.0,"y":960.0,},
+        {"$GMRInstance":"v1","%Name":"inst_491F0100","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_491F0100","objectId":{"name":"obj_enemy2","path":"objects/obj_enemy2/obj_enemy2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1120.0,"y":800.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

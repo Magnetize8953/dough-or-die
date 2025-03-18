@@ -1,13 +1,10 @@
-collision_happened = false;
+exists = false;
 
-hsp = 10; 
-hspeed = hsp;
+close = false;
 
-follow_range = 100000;
+far = false;
+map_done = false;
+close = false;
 
-min_dist = 10;
-
-draw_once = true;
-text_visible = true;
-
-alarm[0] = 60 * 3;
+var delay = 60 * 10;
+alarm[0] = delay
