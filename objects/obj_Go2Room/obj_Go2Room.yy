@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Door",
-    "path":"sprites/spr_Door/spr_Door.yy",
+    "name":"spr_ShearDoors",
+    "path":"sprites/spr_ShearDoors/spr_ShearDoors.yy",
   },
   "spriteMaskId":null,
   "visible":true,

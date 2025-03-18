@@ -287,6 +287,7 @@
     {"id":{"name":"spr_PizzaCutterPickup","path":"sprites/spr_PizzaCutterPickup/spr_PizzaCutterPickup.yy",},},
     {"id":{"name":"spr_PizzaCutterToHold","path":"sprites/spr_PizzaCutterToHold/spr_PizzaCutterToHold.yy",},},
     {"id":{"name":"spr_Room2Door","path":"sprites/spr_Room2Door/spr_Room2Door.yy",},},
+    {"id":{"name":"spr_ShearDoors","path":"sprites/spr_ShearDoors/spr_ShearDoors.yy",},},
     {"id":{"name":"spr_ShrineMessage","path":"sprites/spr_ShrineMessage/spr_ShrineMessage.yy",},},
     {"id":{"name":"spr_starrybackground","path":"sprites/spr_starrybackground/spr_starrybackground.yy",},},
     {"id":{"name":"spr_SundaeShrine","path":"sprites/spr_SundaeShrine/spr_SundaeShrine.yy",},},

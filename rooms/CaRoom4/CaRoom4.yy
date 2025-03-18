@@ -6,7 +6,6 @@
   "inheritCreationOrder":true,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_58109196_19_1_1","path":"rooms/CaRoom4/CaRoom4.yy",},
     {"name":"inst_7384C841_19_1_1","path":"rooms/CaRoom4/CaRoom4.yy",},
     {"name":"inst_198F3618_14_1_1","path":"rooms/CaRoom4/CaRoom4.yy",},
     {"name":"inst_2B3129F_14_1_1","path":"rooms/CaRoom4/CaRoom4.yy",},
@@ -16,6 +15,7 @@
     {"name":"inst_26889703_14_1_1","path":"rooms/CaRoom4/CaRoom4.yy",},
     {"name":"inst_1491C359_14_1_1","path":"rooms/CaRoom4/CaRoom4.yy",},
     {"name":"inst_37BF9A1D_14_1_1","path":"rooms/CaRoom4/CaRoom4.yy",},
+    {"name":"inst_58109196_19_1_1","path":"rooms/CaRoom4/CaRoom4.yy",},
   ],
   "isDnd":false,
   "layers":[
