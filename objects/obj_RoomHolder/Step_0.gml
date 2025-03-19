@@ -171,29 +171,6 @@ if (global.br_north != noone) {
 }
 
 
-// For the variant of center chunk with mini-puzzle for the heart of the maze, 
-// Give it its exits to any direction for the chunk
-if (global.C != noone) {
-	if (self.associated_room == CbRoomHeart) {
-		if (global.TM != noone) {
-			self.north_connect = global.TM.SouthExit;
-			self.north_result = "S";
-		}
-		if (global.ML != noone) {
-			self.west_connect = global.ML.EastExit;
-			self.west_result = "E";
-		}
-		if (global.MR != noone) {
-			self.east_connect = global.MR.WestExit;
-			self.east_result = "W";
-		}
-		if (global.BM != noone) {
-			self.south_connect = global.BM.NorthExit;
-			self.south_result = "N";
-		}
-	}
-}
-
 // Check to link in the Bases
 if (self.associated_room == Player1Base and global.ML != noone) {
 	self.east_connect = global.ML.RoomList[0];
@@ -216,23 +193,24 @@ if ((global.C != noone) and (self.associated_room == CaRoomHeart or self.associa
 	self.south_result = "N";
 }
 
+
 // Checks if the connection is not noone and there's no door there, OR if it has been updated
 // Usage of position_meeting and instance_place provided by ChatGPT, logic is original
-if (!position_meeting(1920 / 2, 10 + obj_Go2Room.sprite_yoffset, obj_Go2Room) and self.north_connect != noone) or (variable_instance_exists(self, "original_nc") and original_nc != self.north_connect) {
-	instance_destroy(instance_place(1920 / 2, 10 + obj_Go2Room.sprite_yoffset, obj_Go2Room));
-	instance_create_layer(1920 / 2, 10 + obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.north_connect, result : self.north_result});
+if (!position_meeting(room_width / 2, 10 + obj_Go2Room.sprite_yoffset, obj_Go2Room) and self.north_connect != noone) or (variable_instance_exists(self, "original_nc") and original_nc != self.north_connect) {
+	instance_destroy(instance_place(room_width / 2, 10 + obj_Go2Room.sprite_yoffset, obj_Go2Room));
+	instance_create_layer(room_width / 2, 10 + obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.north_connect, result : self.north_result, sprite_num : door, image_angle : 0});
 } 
-if (!position_meeting(1920 / 2, 1070 - obj_Go2Room.sprite_yoffset, obj_Go2Room) and self.south_connect != noone) or (variable_instance_exists(self, "original_sc") and original_sc != self.south_connect) {
-	instance_destroy(instance_place(1920 / 2, 1070 - obj_Go2Room.sprite_yoffset, obj_Go2Room));
-	instance_create_layer(1920 / 2, 1070 - obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.south_connect, result : self.south_result});
+if (!position_meeting(room_width / 2, room_height - 10 - obj_Go2Room.sprite_yoffset, obj_Go2Room) and self.south_connect != noone) or (variable_instance_exists(self, "original_sc") and original_sc != self.south_connect) {
+	instance_destroy(instance_place(room_width / 2, room_height - 10 - obj_Go2Room.sprite_yoffset, obj_Go2Room));
+	instance_create_layer(room_width / 2, room_height - 10 - obj_Go2Room.sprite_yoffset, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.south_connect, result : self.south_result, sprite_num : door, image_angle : 180});
 }
-if (!position_meeting(10 + obj_Go2Room.sprite_xoffset, 1080 / 2, obj_Go2Room) and self.west_connect != noone) or (variable_instance_exists(self, "original_wc") and original_wc != self.west_connect) {
-	instance_destroy(instance_place(10 + obj_Go2Room.sprite_xoffset, 1080 / 2, obj_Go2Room));
-	instance_create_layer(10 + obj_Go2Room.sprite_xoffset, 1080 / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.west_connect, result : self.west_result});
+if (!position_meeting(10 + obj_Go2Room.sprite_xoffset, room_height / 2, obj_Go2Room) and self.west_connect != noone) or (variable_instance_exists(self, "original_wc") and original_wc != self.west_connect) {
+	instance_destroy(instance_place(10 + obj_Go2Room.sprite_xoffset, room_height / 2, obj_Go2Room));
+	instance_create_layer(10 + obj_Go2Room.sprite_xoffset, room_height / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.west_connect, result : self.west_result, sprite_num : door, image_angle : 90});
 }
-if (!position_meeting(1910 - obj_Go2Room.sprite_xoffset, 1080 / 2, obj_Go2Room) and self.east_connect != noone) or (variable_instance_exists(self, "original_ec") and original_ec != self.east_connect) {
-	instance_destroy(instance_place(1910 - obj_Go2Room.sprite_xoffset, 1080 / 2, obj_Go2Room));
-	instance_create_layer(1910 - obj_Go2Room.sprite_xoffset, 1080 / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.east_connect, result : self.east_result});
+if (!position_meeting(room_width - 10 - obj_Go2Room.sprite_xoffset, room_height / 2, obj_Go2Room) and self.east_connect != noone) or (variable_instance_exists(self, "original_ec") and original_ec != self.east_connect) {
+	instance_destroy(instance_place(room_width - 10 - obj_Go2Room.sprite_xoffset, room_height / 2, obj_Go2Room));
+	instance_create_layer(room_width - 10 - obj_Go2Room.sprite_xoffset, room_height / 2, "Instances", obj_Go2Room, {associated_room_hold : self, room_link : self.east_connect, result : self.east_result, sprite_num : door, image_angle : 270});
 }
 
 
