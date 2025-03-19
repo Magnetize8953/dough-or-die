@@ -132,7 +132,7 @@ if (event_id == client_socket && event_id != 1) {
         
     } else if (identifier == NETWORK.YOU_LOST) {
         
-        global.game_state == "You lost!";
+        global.game_state = "You lost!";
         room_goto(EndStateRoom);
         
     }

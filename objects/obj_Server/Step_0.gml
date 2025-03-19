@@ -156,7 +156,7 @@ if (host_has_cutter && keyboard_check_pressed(vk_space) && obj_Player.wep_held.d
 
 
 // win state for host
-if (obj_Player.current_room == Player2Base) {
+if (global.game_state == "win") {
     show_debug_message("player one wins");
     
     for (var j = 0; j < ds_list_size(sockets); j++) {
@@ -171,4 +171,7 @@ if (obj_Player.current_room == Player2Base) {
         
         network_send_packet(socket, buffer, buffer_tell(buffer));
     }
+    
+    global.game_state = "You win!";
+    room_goto(EndStateRoom);
 }
