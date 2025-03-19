@@ -105,5 +105,5 @@ Licensed under Creative Commons BY-SA 4.0.
 https://commons.wikimedia.org/wiki/File:Hydra_viridissima2.jpg
 
 
-Wall sprites created with gelp of Freepik. 
+Wall sprites created with help of Freepik. 
 Designed by 0melapics / Freepik
