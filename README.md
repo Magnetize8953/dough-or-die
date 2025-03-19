@@ -38,5 +38,72 @@ For the cheat codes, we use the `ALT` key as the modifier key.
 Just the letter `R` restarts the game.
 
 
-LICENSE INFORMATION: 
-241213_215614_FR_Symphony_orchestra_tuning by kevp888 -- https://freesound.org/s/780509/ -- License: Attribution 4.0
+## LICENSE INFORMATION: 
+"Pinball Spring" Kevin MacLeod (incompetech.com). 
+Licensed under Creative Commons: By Attribution 4.0 License. 
+http://creativecommons.org/licenses/by/4.0/
+
+
+No Time by ChaytonMan. 
+Licensed under Creative Commons BY-NC-ND 3.0. 
+https://www.newgrounds.com/audio/listen/1391360
+
+
+Interface Sounds, Impact Sounds, RPG Audio by Kenney Game Assets. 
+Licensed under Creative Commons 0. 
+https://kenney.nl/
+
+
+Sword Swipes by freesound_community. 
+Licensed under Pixabay Content License. 
+https://pixabay.com/sound-effects/sword-swipes-7174/
+
+
+241213_215614_FR_Symphony_orchestra_tuning by kevp888. 
+Licensed under Creative Commons BY 4.0. 
+https://freesound.org/people/kevp888/sounds/780509/
+
+
+Bass drum hit by Kickdrum. 
+Licensed under Sample Focus Standard License. 
+https://samplefocus.com/samples/bass-drum-hit
+
+
+Mystical Chime by u_1cwn0vj1yq. 
+Licensed under Pixabay Content License. 
+https://pixabay.com/sound-effects/mystical-chime-196405/
+
+
+Italian Opera by Steve Oxen. 
+Made royalty free by Fesliyan Studios Inc. 
+https://www.fesliyanstudios.com/royalty-free-music/download/italian-opera/1934
+
+
+William Howard Taft telephones 1908 from the Library of Congress. 
+Public domain by US Government. 
+https://commons.wikimedia.org/wiki/File:William_Howard_Taft_telephones_1908.jpg
+
+
+Cassetta frame (mid-16th century) golden carved wood by The MET Museum. 
+Released to the public domain. 
+https://www.rawpixel.com/image/9758896/photo-image-frame-art-vintage
+
+
+Scarlet Globe Mallow by Mary Vaux Walcott. 
+Released to the public domain. 
+https://www.rawpixel.com/image/2613511/free-illustration-image-flower-botanical-vintage-flowers
+
+
+
+Single Pink by Jess Watters. 
+Licensed under Creative Commons 0. 
+https://stocksnap.io/photo/single-pink-UY9ATHDWZF
+
+
+Hydra viridissima2 by Peter Schuchert. 
+Licensed under Creative Commons BY-SA 4.0. 
+https://commons.wikimedia.org/wiki/File:Hydra_viridissima2.jpg
+
+
+Wall sprites created with gelp of Freepik. 
+Designed by 0melapics / Freepik
