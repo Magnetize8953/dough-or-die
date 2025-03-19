@@ -1,7 +1,7 @@
-if (pos < 0) {
-    pos = 0;
+if (pos < min_pos_limit) {
+    pos = min_pos_limit;
 }
 
-if (pos > pos_limit) {
-    pos = pos_limit;
+if (pos > max_pos_limit) {
+    pos = max_pos_limit;
 }
