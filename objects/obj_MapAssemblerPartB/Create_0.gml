@@ -71,6 +71,7 @@ if (!instance_exists(obj_Client)) {
 global.map_generated = true;
 
 instance_create_layer(500, 400, "Instances", obj_Player);
+instance_create_layer(room_width + 250, 50, "Instances", obj_Parrot);
 
 // start playing new background music after game finishes generating
 global.background_music = audio_play_sound(snd_GameplayMusic, 1, true);
