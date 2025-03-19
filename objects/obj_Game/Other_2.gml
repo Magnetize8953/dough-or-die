@@ -1,5 +1,7 @@
+/*
 // Set our drawing font for the menu
 draw_set_font(fnt_main);
+//audio_play_sound(snd_MenuMusic, 3, true);
 
 
 // Set our global variables to noone
@@ -45,3 +47,4 @@ global.background_music = audio_play_sound(snd_MenuMusic, 1, true);
 
 // winner-loser
 global.game_state = "unknown";
+*/
